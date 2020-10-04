@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            MainScreen(beverages: beverageLoader.data.filter{$0.tapNumber > 0}.sorted{$0.tapNumber < $1.tapNumber})
+            Screen(beverages: beverageLoader.data.filter{$0.tapNumber > 0}.sorted{$0.tapNumber < $1.tapNumber})
                 .tabItem {
                     Image(systemName: selectedTab != 0 ? "cart" : "cart.fill")
                     Text("Screen")

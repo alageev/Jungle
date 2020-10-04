@@ -13,9 +13,18 @@ struct Menu: View {
     let pates: [Food]
     
     init(beverages: [Beverage], foods: [Food]){
+        
         self.beverages = beverages
         khachapuris = foods.filter{$0.type == "Khachapuri"}
         pates = foods.filter{$0.type == "Pate"}
+        for beverage in beverages {
+            let url = URL(string: beverage.imageLink.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!
+            ImageLoader(url: url, cache: Environment(\.imageCache).wrappedValue).load()
+        }
+        for food in foods {
+            let url = URL(string: food.imageLink.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!
+            ImageLoader(url: url, cache: Environment(\.imageCache).wrappedValue).load()
+        }
     }
     
     var body: some View {

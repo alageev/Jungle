@@ -1,5 +1,5 @@
 //
-//  MainScreen.swift
+//  Screen.swift
 //  Jungle
 //
 //  Created by Алексей Агеев on 25.09.2020.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainScreen: View {
+struct Screen: View {
     var beverages: [Beverage]
     
     var body: some View {
@@ -20,8 +20,8 @@ struct MainScreen: View {
     }
 }
 
-struct MainScreen_Previews: PreviewProvider {
+struct Screen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen(beverages: testBeverages.filter{$0.tapNumber > 0}.sorted{$0.tapNumber < $1.tapNumber})
+        Screen(beverages: testBeverages.filter{$0.tapNumber > 0}.sorted{$0.tapNumber < $1.tapNumber})
     }
 }
