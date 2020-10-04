@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17505" systemVersion="20A5374i" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BeverageClass" representedClassName="BeverageClass" syncable="YES" codeGenerationType="class">
+        <attribute name="alcohol" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="bitterness" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="breweryName" attributeType="String"/>
+        <attribute name="city" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageLink" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="price" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="style" attributeType="String"/>
+        <attribute name="volume" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Entity2" representedClassName="Entity2" syncable="YES" codeGenerationType="class"/>
+    <entity name="FoodClass" representedClassName="FoodClass" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageLink" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="price" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" attributeType="String"/>
+        <attribute name="weight" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="BeverageClass" positionX="-63" positionY="-18" width="128" height="179"/>
+        <element name="Entity2" positionX="-36" positionY="9" width="128" height="29"/>
+        <element name="FoodClass" positionX="-54" positionY="-9" width="128" height="119"/>
+    </elements>
+</model>
