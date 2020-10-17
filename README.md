@@ -1,3 +1,3 @@
 # Jungle
 
-Приложение для www.instagram.com/jungle.dikobar/
+Приложение для [Jungle.dikobar](https://www.instagram.com/jungle.dikobar)
