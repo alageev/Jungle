@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let testBeverages: [Beverage] = load("testBeverage.json")
+let testBeverages: [Beverage] = load("beverages.json")
 let testFoods: [Food] = load("testFoods.json")
 
 func load<T: Decodable>(_ filename: String) -> T {

@@ -16,6 +16,8 @@ struct FoodRow: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(food.name)
+                    .font(.title2)
+                    .foregroundColor(.accentColor)
                 Text(food.type)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
@@ -33,5 +35,7 @@ struct FoodRow: View {
 struct FoodRow_Previews: PreviewProvider {
     static var previews: some View {
         FoodRow(food: testFoods[0])
+            .padding(.leading)
+            .previewLayout(.sizeThatFits)
     }
 }

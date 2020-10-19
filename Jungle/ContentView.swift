@@ -11,8 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var selectedTab = 0
-    @ObservedObject var beverageLoader = JSONLoader<Beverage>(url: constants.beveragesURL)
-    @ObservedObject var foodsLoader = JSONLoader<Food>(url: constants.foodsURL)
+    @ObservedObject var beverageLoader = JSONLoader<Beverage>(url: Constants().beveragesURL)
+    @ObservedObject var foodsLoader = JSONLoader<Food>(url: Constants().foodsURL)
     
     var body: some View {
         TabView(selection: $selectedTab) {

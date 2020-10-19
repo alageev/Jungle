@@ -29,6 +29,15 @@ struct FoodDetail: View {
 
 struct FoodDetail_Previews: PreviewProvider {
     static var previews: some View {
-        FoodDetail(food: testFoods[0])
+        Group {
+            FoodDetail(food: testFoods[0])
+                .preferredColorScheme(.light)
+                .previewLayout(.sizeThatFits)
+            FoodDetail(food: testFoods[0])
+                .preferredColorScheme(.dark)
+                .environment(\.sizeCategory, .extraExtraExtraLarge)
+                .previewLayout(.sizeThatFits)
+            
+        }
     }
 }

@@ -12,6 +12,8 @@ struct Menu: View {
     let khachapuris: [Food]
     let pates: [Food]
     
+    @State var selectedOption = 0
+    
     init(beverages: [Beverage], foods: [Food]){
         
         self.beverages = beverages
@@ -28,30 +30,28 @@ struct Menu: View {
     }
     
     var body: some View {
+        
         NavigationView {
             List {
-                Text("Beverages")
-                    .font(.title)
-                    .padding(.top)
-                ForEach(beverages){ beverage in
-                    BeverageRow(beverage: beverage)
+                Section(header: Text("Beverages")){
+                    ForEach(beverages){ beverage in
+                        BeverageRow(beverage: beverage)
+                    }
                 }
-                
-                Text("Khachapuris")
-                    .font(.title)
-                    .padding(.top)
-                ForEach(khachapuris){ khachapuri in
-                    FoodRow(food: khachapuri)
+                Section(header: Text("Khachapuris")){
+                    ForEach(khachapuris){ khachapuri in
+                        FoodRow(food: khachapuri)
+                    }
                 }
                     
-                Text("Pates")
-                    .font(.title)
-                    .padding(.top)
-                ForEach(pates){ pate in
-                    FoodRow(food: pate)
+                Section(header: Text("Pates")){
+                    ForEach(pates){ pate in
+                        FoodRow(food: pate)
+                    }
                 }
             }
-            .navigationBarTitle(Text("Menu"))
+            .navigationTitle(Text("Menu"))
+            .listStyle(InsetGroupedListStyle())
         }
     }
 }

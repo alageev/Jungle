@@ -1,0 +1,23 @@
+/*
+  Localizable.strings (Russian)
+  Jungle
+
+  Created by Алексей Агеев on 19.10.2020.
+  
+*/
+
+"Screen"       = "На экране";
+"Menu"         = "Меню";
+"Style"        = "Стиль";
+"City"         = "Город";
+"Brevery"      = "Пивоварня";
+"ABV"          = "ABV";
+"IBU"          = "IBU";
+"Volume|Price" = "Объём | Цена";
+"Description"  = "Описание";
+"Weight"       = "Вес";
+"Price"        = "Цена";
+"Events"       = "События";
+"Beverages"    = "Напитки";
+"Khachapuris"  = "Хачапури";
+"Pates"        = "Паштеты";

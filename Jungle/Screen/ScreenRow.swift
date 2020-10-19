@@ -18,15 +18,15 @@ struct ScreenRow: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text(beverage.name)
+                        .font(.title3)
+                        .foregroundColor(.accentColor)
                     Text(beverage.style)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
                 Spacer()
-//                Text(String(beverage.tapNumber))
-//                    .font(.largeTitle)
                 Image(systemName: "\(beverage.tapNumber).circle")
-                    .font(.largeTitle)
+                    .font(.title3)
                     .foregroundColor(.accentColor)
             }
         }
@@ -39,13 +39,13 @@ struct ScreenRow: View {
 
 struct ScreenRow_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ScreenRow(beverage: testBeverages[9])
-                .previewLayout(.sizeThatFits)
-                .environment(\.sizeCategory, .extraSmall)
-            ScreenRow(beverage: testBeverages[9])
-                .previewLayout(.sizeThatFits)
-                .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
-        }
+            Group {
+                ScreenRow(beverage: testBeverages[9])
+                    .previewLayout(.sizeThatFits)
+                    .environment(\.sizeCategory, .extraSmall)
+                ScreenRow(beverage: testBeverages[9])
+                    .previewLayout(.sizeThatFits)
+                    .environment(\.sizeCategory, .extraExtraExtraLarge)
+            }
     }
 }

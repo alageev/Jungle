@@ -24,9 +24,9 @@ struct DetailImage: View {
     }
 }
 
-//struct DetailImage_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailImage(name: "Токсовский трамплин", imageURL: "")
-//            .previewLayout(.sizeThatFits)
-//    }
-//}
+struct DetailImage_Previews: PreviewProvider {    
+    static var previews: some View {
+        DetailImage(name: testBeverages[0].name, imageURL: testBeverages[0].imageLink)
+            .previewLayout(.sizeThatFits)
+    }
+}

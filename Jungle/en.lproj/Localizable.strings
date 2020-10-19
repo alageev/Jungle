@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings (English)
+  Jungle
+
+  Created by Алексей Агеев on 19.10.2020.
+  
+*/
+
+"Screen"       = "On the Screen";
+"Menu"         = "Menu";
+"Style"        = "Style";
+"City"         = "City";
+"Brevery"      = "Brevery";
+"ABV"          = "ABV";
+"IBU"          = "IBU";
+"Volume|Price" = "Volume | Price";
+"Description"  = "Description";
+"Weight"       = "Weight";
+"Price"        = "Price";
+"Events"       = "Events";
+"Beverages"    = "Beverages";
+"Khachapuris"  = "Khachapuris";
+"Pates"        = "Pates";

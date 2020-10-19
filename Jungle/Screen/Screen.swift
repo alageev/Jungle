@@ -15,6 +15,7 @@ struct Screen: View {
             List (beverages) { beverage in
                 ScreenRow(beverage: beverage)
             }
+            .listStyle(InsetGroupedListStyle())
             .navigationTitle(Text("Screen"))
         }
     }

@@ -17,6 +17,8 @@ struct BeverageRow: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(beverage.name)
+                    .font(.title3)
+                    .foregroundColor(.accentColor)
                 Text(beverage.style)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
@@ -34,5 +36,7 @@ struct BeverageRow: View {
 struct BeverageRow_Previews: PreviewProvider {
     static var previews: some View {
         BeverageRow(beverage: testBeverages[9])
+            .padding(.leading)
+            .previewLayout(.sizeThatFits)
     }
 }

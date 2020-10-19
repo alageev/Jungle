@@ -52,6 +52,15 @@ struct BeverageDetail: View {
 
 struct BeverageDetail_Previews: PreviewProvider {
     static var previews: some View {
-        BeverageDetail(beverage: testBeverages[11])
+        Group {
+            BeverageDetail(beverage: testBeverages[11])
+                .preferredColorScheme(.light)
+                .previewLayout(.sizeThatFits)
+            BeverageDetail(beverage: testBeverages[11])
+                .preferredColorScheme(.dark)
+                .environment(\.sizeCategory, .extraExtraExtraLarge)
+                .previewLayout(.sizeThatFits)
+
+        }
     }
 }
