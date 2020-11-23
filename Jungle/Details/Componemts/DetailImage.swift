@@ -34,7 +34,7 @@ struct DetailImage: View {
     }
 }
 
-struct DetailImage_Previews: PreviewProvider {    
+struct DetailImage_Previews: PreviewProvider {
     static var previews: some View {
         DetailImage(name: testBeverages[0].name, image: testBeverages[0].id.uuidString)
             .previewLayout(.sizeThatFits)
