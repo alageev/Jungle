@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     
     @State var selectedTab = 0
@@ -24,7 +23,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             Menu(beverages: beverageLoader.data.sorted {$0.name < $1.name},
-                 foods: foodsLoader.data.sorted{$0.name < $1.name})
+                 foods: foodsLoader.data.sorted {$0.name < $1.name})
                 .tabItem {
                     Image(systemName: selectedTab != 1 ? "cart" : "cart.fill")
                     Text("Menu")
