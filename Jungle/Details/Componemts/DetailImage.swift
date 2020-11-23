@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct DetailImage: View {
+    @ObservedObject var imageLoader: ImageLoader
+    
     let name: String
-    let imageURL: String
+    
+    init (name: String, image: String) {
+        self.name = name
+        self.imageLoader = ImageLoader()
+        self.imageLoader.downloadImage(from: image)
+    }
+    
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
-            URLImage(url: imageURL)
+            Image(uiImage: imageLoader.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
             Text(name)
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -26,7 +36,7 @@ struct DetailImage: View {
 
 struct DetailImage_Previews: PreviewProvider {    
     static var previews: some View {
-        DetailImage(name: testBeverages[0].name, imageURL: testBeverages[0].imageLink)
+        DetailImage(name: testBeverages[0].name, image: testBeverages[0].id.uuidString)
             .previewLayout(.sizeThatFits)
     }
 }

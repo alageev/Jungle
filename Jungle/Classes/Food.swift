@@ -8,11 +8,11 @@
 import Foundation
 
 struct Food: Decodable, Identifiable {
-    let id: Int
+    let id: UUID
     let name: String
     let type: String
     let weight: Int
     let price: Int
-    let imageLink: String
+//    let imageLink: String
     let description: String
 }

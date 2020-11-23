@@ -1,1 +1,332 @@
-[{"id":11,"name":"Chocolacto","breweryName":"Zavod","city":"Москва","style":"Milk Stout с шоколадом","alcohol":5.8,"bitterness":20,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":12,"description":"Stout","volume":[0.25,0.5],"price":[150,250]},{"id":2,"name":"Cassis","breweryName":"Lindemans","city":"Бельгия","style":"Lambic с чёрной смородиной","alcohol":2.5,"bitterness":5,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":3,"description":"Stout с безумно длинным-предлинным описанием, на очень очень очень много-премного строк","volume":[0.25],"price":[280]},{"id":10,"name":"Красивые Девушки","breweryName":"Lovecraft Weird","city":"Краснодар","style":"Session IPA с ванилью","alcohol":5,"bitterness":30,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":11,"description":"Stout с безумно длинным-предлинным описанием, на очень очень очень много-премного строк","volume":[0.25,0.5],"price":[190,310]},{"id":9,"name":"Blanche de Moscou ","breweryName":"Zavod","city":"Москва","style":"Wheat beer","alcohol":5.4,"bitterness":10,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":10,"description":"Stout","volume":[0.25,0.5],"price":[150,240]},{"id":15,"name":"Racy Flavour","breweryName":"Red Rocket","city":"Екатеринбург","style":"Smoothie Sour с манго и чёрной смородиной","alcohol":7,"bitterness":0,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":0,"description":"Sour","volume":[0.25,0.4],"price":[220,290]},{"id":16,"name":"Натюрморт","breweryName":"Чаща","city":"Москва","style":"New England IPA","alcohol":7,"bitterness":20,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":0,"description":"IPA","volume":[0.25,0.5],"price":[190,310]},{"id":3,"name":"Ковбой Мальборо","breweryName":"Plan B","city":"Ярославль","style":"American IPA","alcohol":6.5,"bitterness":50,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":0,"description":"IPA","volume":[0.25,0.5],"price":[180,290]},{"id":3,"name":"Orbital Thirsty","breweryName":"Red Rocket","city":"Екатеринбург","style":"Sour с малинищей","alcohol":7,"bitterness":0,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":4,"description":"Stout","volume":[0.25,0.4],"price":[220,290]},{"id":4,"name":"Стереограмма","breweryName":"Big Village","city":"Краснодар","style":"Triple New England IPA","alcohol":9.2,"bitterness":40,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":5,"description":"Stout","volume":[0.25,0.4],"price":[220,300]},{"id":7,"name":"Tiamat","breweryName":"Plam B","city":"Ярославль","style":"Russian Imperial Stout","alcohol":12.5,"bitterness":30,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":8,"description":"Stout","volume":[0.25,0.4],"price":[260,340]},{"id":12,"name":"Smoothie Mead: Mango & Orange","breweryName":"Steppe & Wind","city":"Оренбург","style":"Медовый смузи с манго и апельсином","alcohol":6,"bitterness":0,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":13,"description":"Stout","volume":[0.25],"price":[290]},{"id":14,"name":"Mango","breweryName":"Appleton","city":"Сергиев Посад","style":"Манговый сидр","alcohol":5.5,"bitterness":0,"imageLink":"https://doc-00-04-docs.googleusercontent.com/docs/securesc/topo0k95m3hmdbam7m5incpbferfdg0i/n5lgerlm2enaar1nhaerkktbvn2in059/1601892225000/08034789754015765380/08034789754015765380/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z?e=download&authuser=0&nonce=80nda1df2grc8&user=08034789754015765380&hash=s0gfkfciih3fv6gntm39pce5c8ncra4l","tapNumber":7,"description":"Stout","volume":[0.25],"price":[280]},{"id":8,"name":"Apple Blossom","breweryName":"On the Bones","city":"Токсово","style":"Wild Ale","alcohol":8.8,"bitterness":12,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":9,"description":"Stout","volume":[0.25,0.4],"price":[220,300]},{"id":6,"name":"Brut Cider","breweryName":"Kerisac","city":"Франция","style":"Бретонский яблочный сидр","alcohol":4.5,"bitterness":0,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":0,"description":"Stout","volume":[0.25],"price":[270]},{"id":0,"name":"Barbe Ruby","breweryName":"Verhaeghe","city":"Бельгия","style":"Fruit Beer с вишней","alcohol":8,"bitterness":0,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":1,"description":"Stout","volume":[0.25],"price":[280]},{"id":1,"name":"Певас","breweryName":"Freeloader","city":"Ростов-на-Дону","style":"Lager","alcohol":5,"bitterness":0,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":2,"description":"Stout","volume":[0.5],"price":[150]},{"id":5,"name":"Токсовский Трамплин","breweryName":"On the Bones","city":"Токсово","style":"American IPA","alcohol":7,"bitterness":105,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":6,"description":"Stout","volume":[0.25,0.5],"price":[170,270]},{"id":13,"name":"Тщеславие","breweryName":"4 Brewers","city":"Владимир","style":"Кофейный Stout","alcohol":7,"bitterness":0,"imageLink":"https://drive.google.com/file/d/1xa3jFX45MTEmosqNFeaCffVCUv_kjZ2Z/view?usp=sharing","tapNumber":14,"description":"Stout","volume":[0.25,0.5],"price":[180,290]}]
+[
+    {
+        "id":"5ea77131-6fda-49a2-a9c2-5efb5069c084",
+        "name":"Тщеславие",
+        "breweryName":"4 Brewers",
+        "city":"Владимир",
+        "style":"Кофейный Stout",
+        "alcohol":7,
+        "bitterness":0,
+        "tapNumber":14,
+        "description":"Stout",
+        "volume":[
+            0.25,
+            0.5
+        ],
+        "price":[
+            180,
+            290
+        ]
+    },
+    {
+        "id":"10e856c3-94a1-45f0-bb25-4aea1bcbdf19",
+        "name":"Smoothie Mead: Mango & Orange",
+        "breweryName":"Steppe & Wind",
+        "city":"Оренбург",
+        "style":"Медовый смузи с манго и апельсином",
+        "alcohol":6,
+        "bitterness":0,
+        "tapNumber":13,
+        "description":"Stout",
+        "volume":[
+            0.25
+        ],
+        "price":[
+            290
+        ]
+    },
+    {
+        "id":"42445e99-9717-4d93-8ffc-ec9c388d1ed3",
+        "name":"Brut Cider",
+        "breweryName":"Kerisac",
+        "city":"Франция",
+        "style":"Бретонский яблочный сидр",
+        "alcohol":4.5,
+        "bitterness":0,
+        "tapNumber":0,
+        "description":"Stout",
+        "volume":[
+            0.25
+        ],
+        "price":[
+            270
+        ]
+    },
+    {
+        "id":"d2c8a839-d9ac-4d60-b18c-638d133562d1",
+        "name":"Cassis",
+        "breweryName":"Lindemans",
+        "city":"Бельгия",
+        "style":"Lambic с чёрной смородиной",
+        "alcohol":2.5,
+        "bitterness":5,
+        "tapNumber":3,
+        "description":"Stout с безумно длинным-предлинным описанием, на очень очень очень много-премного строк",
+        "volume":[
+            0.25
+        ],
+        "price":[
+            280
+        ]
+    },
+    {
+        "id":"b8ecbf17-ea97-4d96-a982-7b3de4a569da",
+        "name":"Chocolacto",
+        "breweryName":"Zavod",
+        "city":"Москва",
+        "style":"Milk Stout с шоколадом",
+        "alcohol":5.8,
+        "bitterness":20,
+        "tapNumber":12,
+        "description":"Stout",
+        "volume":[
+            0.25,
+            0.5
+        ],
+        "price":[
+            150,
+            250
+        ]
+    },
+    {
+        "id":"1fcbf7fe-74c2-4c15-b3c8-8adc84a303c6",
+        "name":"Токсовский Трамплин",
+        "breweryName":"On the Bones",
+        "city":"Токсово",
+        "style":"American IPA",
+        "alcohol":7,
+        "bitterness":105,
+        "tapNumber":6,
+        "description":"Stout",
+        "volume":[
+            0.25,
+            0.5
+        ],
+        "price":[
+            170,
+            270
+        ]
+    },
+    {
+        "id":"038b4e60-c688-4ecf-8787-2aa45c7d0e8a",
+        "name":"Певас",
+        "breweryName":"Freeloader",
+        "city":"Ростов-на-Дону",
+        "style":"Lager",
+        "alcohol":5,
+        "bitterness":0,
+        "tapNumber":2,
+        "description":"Stout",
+        "volume":[
+            0.5
+        ],
+        "price":[
+            150
+        ]
+    },
+    {
+        "id":"447ffdc6-58b0-4423-b543-6c1b2d7cfa9b",
+        "name":"Ковбой Мальборо",
+        "breweryName":"Plan B",
+        "city":"Ярославль",
+        "style":"American IPA",
+        "alcohol":6.5,
+        "bitterness":50,
+        "tapNumber":0,
+        "description":"IPA",
+        "volume":[
+            0.25,
+            0.5
+        ],
+        "price":[
+            180,
+            290
+        ]
+    },
+    {
+        "id":"d539dad6-7511-40c6-9a51-520725bbc79e",
+        "name":"Красивые Девушки",
+        "breweryName":"Lovecraft Weird",
+        "city":"Краснодар",
+        "style":"Session IPA с ванилью",
+        "alcohol":5,
+        "bitterness":30,
+        "tapNumber":11,
+        "description":"Stout с безумно длинным-предлинным описанием, на очень очень очень много-премного строк",
+        "volume":[
+            0.25,
+            0.5
+        ],
+        "price":[
+            190,
+            310
+        ]
+    },
+    {
+        "id":"9ef76f14-6fcb-4102-ac2b-bb1186337d37",
+        "name":"Orbital Thirsty",
+        "breweryName":"Red Rocket",
+        "city":"Екатеринбург",
+        "style":"Sour с малинищей",
+        "alcohol":7,
+        "bitterness":0,
+        "tapNumber":4,
+        "description":"Stout",
+        "volume":[
+            0.25,
+            0.4
+        ],
+        "price":[
+            220,
+            290
+        ]
+    },
+    {
+        "id":"f1d632d2-47c2-4876-b4a3-3b4381dba74e",
+        "name":"Apple Blossom",
+        "breweryName":"On the Bones",
+        "city":"Токсово",
+        "style":"Wild Ale",
+        "alcohol":8.8,
+        "bitterness":12,
+        "tapNumber":9,
+        "description":"Stout",
+        "volume":[
+            0.25,
+            0.4
+        ],
+        "price":[
+            220,
+            300
+        ]
+    },
+    {
+        "id":"09a37b64-b1cd-4423-8067-e8b85a294ebf",
+        "name":"Blanche de Moscou ",
+        "breweryName":"Zavod",
+        "city":"Москва",
+        "style":"Wheat beer",
+        "alcohol":5.4,
+        "bitterness":10,
+        "tapNumber":10,
+        "description":"Stout",
+        "volume":[
+            0.25,
+            0.5
+        ],
+        "price":[
+            150,
+            240
+        ]
+    },
+    {
+        "id":"437f211c-23e5-4632-8d4e-6d684994d907",
+        "name":"Стереограмма",
+        "breweryName":"Big Village",
+        "city":"Краснодар",
+        "style":"Triple New England IPA",
+        "alcohol":9.2,
+        "bitterness":40,
+        "tapNumber":5,
+        "description":"Stout",
+        "volume":[
+            0.25,
+            0.4
+        ],
+        "price":[
+            220,
+            300
+        ]
+    },
+    {
+        "id":"3a5573ca-6a44-4e56-96bf-4fbeac58b751",
+        "name":"Натюрморт",
+        "breweryName":"Чаща",
+        "city":"Москва",
+        "style":"New England IPA",
+        "alcohol":7,
+        "bitterness":20,
+        "tapNumber":0,
+        "description":"IPA",
+        "volume":[
+            0.25,
+            0.5
+        ],
+        "price":[
+            190,
+            310
+        ]
+    },
+    {
+        "id":"956c3bd8-72c0-45a4-9dd0-06159d52d665",
+        "name":"Mango",
+        "breweryName":"Appleton",
+        "city":"Сергиев Посад",
+        "style":"Манговый сидр",
+        "alcohol":5.5,
+        "bitterness":0,
+        "tapNumber":7,
+        "description":"Stout",
+        "volume":[
+            0.25
+        ],
+        "price":[
+            280
+        ]
+    },
+    {
+        "id":"5a769b2d-dbbe-4d84-909c-2ea0956ae28c",
+        "name":"Tiamat",
+        "breweryName":"Plam B",
+        "city":"Ярославль",
+        "style":"Russian Imperial Stout",
+        "alcohol":12.5,
+        "bitterness":30,
+        "tapNumber":8,
+        "description":"Stout",
+        "volume":[
+            0.25,
+            0.4
+        ],
+        "price":[
+            260,
+            340
+        ]
+    },
+    {
+        "id":"2f9fd8bd-46e5-41b7-8ab9-6a0b03d3a71f",
+        "name":"Racy Flavour",
+        "breweryName":"Red Rocket",
+        "city":"Екатеринбург",
+        "style":"Smoothie Sour с манго и чёрной смородиной",
+        "alcohol":7,
+        "bitterness":0,
+        "tapNumber":0,
+        "description":"Sour",
+        "volume":[
+            0.25,
+            0.4
+        ],
+        "price":[
+            220,
+            290
+        ]
+    },
+    {
+        "id":"cdfe5af9-4b55-4bbd-a710-d902858f0a3f",
+        "name":"Barbe Ruby",
+        "breweryName":"Verhaeghe",
+        "city":"Бельгия",
+        "style":"Fruit Beer с вишней",
+        "alcohol":8,
+        "bitterness":0,
+        "tapNumber":1,
+        "description":"Stout",
+        "volume":[
+            0.25
+        ],
+        "price":[
+            280
+        ]
+    }
+]

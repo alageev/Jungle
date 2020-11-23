@@ -14,7 +14,7 @@ struct FoodDetail: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                DetailImage(name: food.name, imageURL: food.imageLink)
+                DetailImage(name: food.name, image: food.id.uuidString)
                 VStack(alignment: .leading) {
                     DetailRow(name: "Weight", value: "\(food.weight)g")
                     DetailRow(name: "Price", value: "\(food.price)₽")

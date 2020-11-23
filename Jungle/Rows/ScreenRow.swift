@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ScreenRow: View {
     
-    @State var isPresent = false
+    @State var isPresented = false
     
     let beverage: Beverage
     
     var body: some View {
-        Button(action: {isPresent.toggle()}){
+        Button(action: {isPresented.toggle()}){
             HStack {
                 VStack(alignment: .leading) {
                     Text(beverage.name)
@@ -25,12 +25,11 @@ struct ScreenRow: View {
                         .foregroundColor(.secondary)
                 }
                 Spacer()
-                Image(systemName: "\(beverage.tapNumber).circle")
-                    .font(.title3)
-                    .foregroundColor(.accentColor)
+                Image(systemName: "\(beverage.tapNumber).circle.fill")
+                    .font(.system(.largeTitle))
             }
         }
-        .sheet(isPresented: $isPresent, content: {
+        .sheet(isPresented: $isPresented, content: {
             BeverageDetail(beverage: beverage)
         })
         
@@ -41,11 +40,11 @@ struct ScreenRow_Previews: PreviewProvider {
     static var previews: some View {
             Group {
                 ScreenRow(beverage: testBeverages[9])
-                    .previewLayout(.sizeThatFits)
                     .environment(\.sizeCategory, .extraSmall)
                 ScreenRow(beverage: testBeverages[9])
-                    .previewLayout(.sizeThatFits)
                     .environment(\.sizeCategory, .extraExtraExtraLarge)
             }
+            .padding([.leading, .trailing])
+            .previewLayout(.sizeThatFits)
     }
 }

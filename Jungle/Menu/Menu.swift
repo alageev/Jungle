@@ -12,21 +12,13 @@ struct Menu: View {
     let khachapuris: [Food]
     let pates: [Food]
     
-    @State var selectedOption = 0
+    @State var selectedOption = false
     
     init(beverages: [Beverage], foods: [Food]){
         
         self.beverages = beverages
-        khachapuris = foods.filter{$0.type == "Khachapuri"}
-        pates = foods.filter{$0.type == "Pate"}
-        for beverage in beverages {
-            let url = URL(string: beverage.imageLink.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!
-            ImageLoader(url: url, cache: Environment(\.imageCache).wrappedValue).load()
-        }
-        for food in foods {
-            let url = URL(string: food.imageLink.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)!
-            ImageLoader(url: url, cache: Environment(\.imageCache).wrappedValue).load()
-        }
+        self.khachapuris = foods.filter{$0.type == "Khachapuri"}
+        self.pates = foods.filter{$0.type == "Pate"}
     }
     
     var body: some View {
@@ -35,18 +27,39 @@ struct Menu: View {
             List {
                 Section(header: Text("Beverages")){
                     ForEach(beverages){ beverage in
-                        BeverageRow(beverage: beverage)
+//                        Button(action: {
+//                            selectedOption.toggle()
+//                        }) {
+                            BeverageRow(beverage: beverage)
+//                                .sheet(isPresented: $selectedOption, content: {
+//                                    BeverageDetail(beverage: beverage)
+//                                })
+//                        }
                     }
                 }
                 Section(header: Text("Khachapuris")){
                     ForEach(khachapuris){ khachapuri in
-                        FoodRow(food: khachapuri)
+//                        Button(action: {
+//                            selectedOption.toggle()
+//                        }) {
+                            FoodRow(food: khachapuri)
+//                                .sheet(isPresented: $selectedOption, content: {
+//                                    FoodDetail(food: khachapuri)
+//                                })
+//                        }
                     }
                 }
                     
                 Section(header: Text("Pates")){
                     ForEach(pates){ pate in
-                        FoodRow(food: pate)
+//                        Button(action: {
+//                            selectedOption.toggle()
+//                        }) {
+                            FoodRow(food: pate)
+//                                .sheet(isPresented: $selectedOption, content: {
+//                                    FoodDetail(food: pate)
+//                                })
+//                        }
                     }
                 }
             }

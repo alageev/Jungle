@@ -16,11 +16,6 @@ struct DetailRow: View {
         self.value = value
     }
     
-//    init (name: String, value: Int, suffix: String){
-//        self.name = LocalizedStringKey(name)
-//        self.value = "\(value)" + suffix
-//    }
-    
     init (name: String, value: Double, suffix: String){
         self.name = LocalizedStringKey(name)
         self.value = String(format: "%.1f", value) + suffix
@@ -41,7 +36,7 @@ struct DetailRow: View {
 struct DetailRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            DetailRow(name: "Volume|Price", value: testBeverages[0].volume[0], suffix: "")
+//            DetailRow(name: "Volume|Price", value: testBeverages[0].volume[0], suffix: "")
             
             DetailRow(name: "City", value: testBeverages[0].city)
         }

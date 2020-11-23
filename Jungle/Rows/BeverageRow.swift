@@ -9,12 +9,14 @@ import SwiftUI
 
 struct BeverageRow: View {
     
-    @State var isPresent = false
+    @State var isPresented = false
     
     let beverage: Beverage
     
     var body: some View {
-        HStack {
+        Button(action: {
+            isPresented.toggle()
+        }) {
             VStack(alignment: .leading) {
                 Text(beverage.name)
                     .font(.title3)
@@ -23,11 +25,8 @@ struct BeverageRow: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
-            Spacer()
         }
-        .contentShape(Rectangle())
-        .onTapGesture {isPresent.toggle()}
-        .sheet(isPresented: $isPresent, content: {
+        .sheet(isPresented: $isPresented, content: {
             BeverageDetail(beverage: beverage)
         })
     }
@@ -36,7 +35,7 @@ struct BeverageRow: View {
 struct BeverageRow_Previews: PreviewProvider {
     static var previews: some View {
         BeverageRow(beverage: testBeverages[9])
-            .padding(.leading)
+            .padding([.leading, .trailing])
             .previewLayout(.sizeThatFits)
     }
 }

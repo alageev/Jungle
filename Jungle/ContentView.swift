@@ -11,8 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var selectedTab = 0
-    @ObservedObject var beverageLoader = JSONLoader<Beverage>(url: Constants().beveragesURL)
-    @ObservedObject var foodsLoader = JSONLoader<Food>(url: Constants().foodsURL)
+    @ObservedObject var beverageLoader = JSONLoader<Beverage>(url: Constants.shared.beverages)
+    @ObservedObject var foodsLoader = JSONLoader<Food>(url: Constants.shared.foods)
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -22,7 +22,7 @@ struct ContentView: View {
                     Text("Screen")
                     
                 }.tag(0)
-            Menu(beverages: beverageLoader.data.sorted{$0.id < $1.id}, foods: foodsLoader.data.sorted{$0.id < $1.id})
+            Menu(beverages: beverageLoader.data.sorted{$0.name < $1.name}, foods: foodsLoader.data.sorted{$0.name < $1.name})
                 .tabItem {
                     Image(systemName: selectedTab != 1 ? "cart" : "cart.fill")
                     Text("Menu")
@@ -30,7 +30,7 @@ struct ContentView: View {
                 }.tag(1)
             Events()
                 .tabItem {
-                    Image(systemName: selectedTab != 1 ? "cart" : "cart.fill")
+                    Image(systemName: selectedTab != 2 ? "cart" : "cart.fill")
                     Text("Events")
                     
                 }.tag(2)

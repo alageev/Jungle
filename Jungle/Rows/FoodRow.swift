@@ -9,11 +9,14 @@ import SwiftUI
 
 struct FoodRow: View {
     
-    @State var isPresent = false
+    @State var isPresented = false
     
     let food: Food
+    
     var body: some View {
-        HStack {
+        Button(action: {
+            isPresented.toggle()
+        }) {
             VStack(alignment: .leading) {
                 Text(food.name)
                     .font(.title2)
@@ -22,11 +25,8 @@ struct FoodRow: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
-            Spacer()
         }
-        .contentShape(Rectangle())
-        .onTapGesture {isPresent.toggle()}
-        .sheet(isPresented: $isPresent, content: {
+        .sheet(isPresented: $isPresented, content: {
             FoodDetail(food: food)
         })
     }
