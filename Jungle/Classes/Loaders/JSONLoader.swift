@@ -14,7 +14,7 @@ class JSONLoader<T: Decodable>: ObservableObject {
     init(url: URL) {
         var request = URLRequest(url: url)
         request.cachePolicy = .reloadIgnoringCacheData
-        URLSession.shared.dataTask(with: request) { data, _ , error in
+        URLSession.shared.dataTask(with: request) { data, _, error in
             do {
                 guard let data = data else { fatalError("Invalid Data") }
                 let decodedJSON = try JSONDecoder().decode([T].self, from: data)
