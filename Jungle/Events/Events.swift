@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct Events: View {
-	@State var showingDetail = false
-	
-	var body: some View {
-		EmptyView()
-	}
+    @State var showingDetail = false
+    
+    var body: some View {
+        EmptyView()
+    }
 }
 
 struct Events_Previews: PreviewProvider {
-	static var previews: some View {
-		Events()
-	}
+    static var previews: some View {
+        Events()
+    }
 }
