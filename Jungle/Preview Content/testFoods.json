@@ -1,18 +1,18 @@
 [
-    {
-        "id":"b84719aa-3bd7-4d88-9f4a-213190196383",
-        "name":"Четыре сыра",
-        "type":"Khachapuri",
-        "weight":200,
-        "price":300,
-        "description":"Вкусный хачапури"
-    },
-    {
-        "id":"426949d4-d814-4886-b342-d682133fa37a",
-        "name":"pate",
-        "type":"Pate",
-        "weight":200,
-        "price":300,
-        "description":"Вкусный паштет"
-    }
+	{
+		"id":"b84719aa-3bd7-4d88-9f4a-213190196383",
+		"name":"Четыре сыра",
+		"type":"Khachapuri",
+		"weight":200,
+		"price":300,
+		"description":"Вкусный хачапури"
+	},
+	{
+		"id":"426949d4-d814-4886-b342-d682133fa37a",
+		"name":"pate",
+		"type":"Pate",
+		"weight":200,
+		"price":300,
+		"description":"Вкусный паштет"
+	}
 ]
