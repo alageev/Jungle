@@ -21,7 +21,8 @@ struct FoodDetail: View {
                     Text("Description")
                         .padding(.bottom)
                     Text(food.description)
-                }.padding([.leading, .top])
+                }
+                .padding([.leading, .top])
             }
         }
     }

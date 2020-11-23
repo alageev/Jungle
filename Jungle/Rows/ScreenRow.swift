@@ -14,7 +14,9 @@ struct ScreenRow: View {
     let beverage: Beverage
     
     var body: some View {
-        Button(action: {isPresented.toggle()}){
+        Button(action: {
+                isPresented.toggle()
+        }) {
             HStack {
                 VStack(alignment: .leading) {
                     Text(beverage.name)

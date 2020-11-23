@@ -14,7 +14,7 @@ struct Menu: View {
     
     @State var selectedOption = false
     
-    init(beverages: [Beverage], foods: [Food]){
+    init(beverages: [Beverage], foods: [Food]) {
         
         self.beverages = beverages
         self.khachapuris = foods.filter{$0.type == "Khachapuri"}
@@ -25,41 +25,20 @@ struct Menu: View {
         
         NavigationView {
             List {
-                Section(header: Text("Beverages")){
-                    ForEach(beverages){ beverage in
-//                        Button(action: {
-//                            selectedOption.toggle()
-//                        }) {
-                            BeverageRow(beverage: beverage)
-//                                .sheet(isPresented: $selectedOption, content: {
-//                                    BeverageDetail(beverage: beverage)
-//                                })
-//                        }
+                Section(header: Text("Beverages")) {
+                    ForEach(beverages) { beverage in
+                        BeverageRow(beverage: beverage)
                     }
                 }
-                Section(header: Text("Khachapuris")){
-                    ForEach(khachapuris){ khachapuri in
-//                        Button(action: {
-//                            selectedOption.toggle()
-//                        }) {
-                            FoodRow(food: khachapuri)
-//                                .sheet(isPresented: $selectedOption, content: {
-//                                    FoodDetail(food: khachapuri)
-//                                })
-//                        }
+                Section(header: Text("Khachapuris")) {
+                    ForEach(khachapuris) { khachapuri in
+                        FoodRow(food: khachapuri)
                     }
                 }
-                    
-                Section(header: Text("Pates")){
+                
+                Section(header: Text("Pates")) {
                     ForEach(pates){ pate in
-//                        Button(action: {
-//                            selectedOption.toggle()
-//                        }) {
-                            FoodRow(food: pate)
-//                                .sheet(isPresented: $selectedOption, content: {
-//                                    FoodDetail(food: pate)
-//                                })
-//                        }
+                        FoodRow(food: pate)
                     }
                 }
             }

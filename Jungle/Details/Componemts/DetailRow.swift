@@ -11,12 +11,12 @@ struct DetailRow: View {
     let name: LocalizedStringKey
     let value: String
     
-    init (name: String, value: String){
+    init (name: String, value: String) {
         self.name = LocalizedStringKey(name)
         self.value = value
     }
     
-    init (name: String, value: Double, suffix: String){
+    init (name: String, value: Double, suffix: String) {
         self.name = LocalizedStringKey(name)
         self.value = String(format: "%.1f", value) + suffix
     }
@@ -27,7 +27,8 @@ struct DetailRow: View {
                 Text(name)
                 Spacer()
                 Text(value)
-            }.padding(.trailing)
+            }
+            .padding(.trailing)
             Divider()
         }
     }
@@ -35,12 +36,8 @@ struct DetailRow: View {
 
 struct DetailRow_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-//            DetailRow(name: "Volume|Price", value: testBeverages[0].volume[0], suffix: "")
-            
-            DetailRow(name: "City", value: testBeverages[0].city)
-        }
-        .padding(.leading)
-        .previewLayout(.sizeThatFits)
+        DetailRow(name: "City", value: testBeverages[0].city)
+            .padding(.leading)
+            .previewLayout(.sizeThatFits)
     }
 }

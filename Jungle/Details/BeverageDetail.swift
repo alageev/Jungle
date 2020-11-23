@@ -38,7 +38,8 @@ struct BeverageDetail: View {
                                 }
                             }
                         }
-                    }.padding(.trailing)
+                    }
+                    .padding(.trailing)
                     Divider()
                     Text("Description")
                         .padding(.bottom)
@@ -60,7 +61,6 @@ struct BeverageDetail_Previews: PreviewProvider {
                 .preferredColorScheme(.dark)
                 .environment(\.sizeCategory, .extraExtraExtraLarge)
                 .previewLayout(.sizeThatFits)
-
         }
     }
 }

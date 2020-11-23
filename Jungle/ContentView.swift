@@ -21,21 +21,21 @@ struct ContentView: View {
                     Image(systemName: selectedTab != 0 ? "cart" : "cart.fill")
                     Text("Screen")
                     
-                }.tag(0)
+                }
+                .tag(0)
             Menu(beverages: beverageLoader.data.sorted{$0.name < $1.name}, foods: foodsLoader.data.sorted{$0.name < $1.name})
                 .tabItem {
                     Image(systemName: selectedTab != 1 ? "cart" : "cart.fill")
                     Text("Menu")
-                    
-                }.tag(1)
+                }
+                .tag(1)
             Events()
                 .tabItem {
                     Image(systemName: selectedTab != 2 ? "cart" : "cart.fill")
                     Text("Events")
-                    
-                }.tag(2)
+                }
+                .tag(2)
         }
-        .ignoresSafeArea()
     }
 }
 

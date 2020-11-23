@@ -81,7 +81,6 @@ import UIKit
 
 final class ImageLoader: ObservableObject {
     let downloader: CLDDownloader
-//    let uploader: CLDUploader
     let cloudinary: CLDCloudinary
     let fileName = UUID().uuidString
     
@@ -91,13 +90,12 @@ final class ImageLoader: ObservableObject {
         let config = CLDConfiguration(cloudinaryUrl: Constants.shared.cloudinary)!
         self.cloudinary = CLDCloudinary(configuration: config)
         self.downloader = cloudinary.createDownloader()
-//        self.uploader = cloudinary.createUploader()
     }
     
-    func downloadImage(from url: String){
+    func downloadImage(from url: String) {
         DispatchQueue.global(qos: .userInteractive).async {
             let imageUrl = self.cloudinary.createUrl().generate(url)!
-            self.downloader.fetchImage(imageUrl, completionHandler:  { (image, error) in
+            self.downloader.fetchImage(imageUrl, completionHandler: { (image, error) in
                 if let error = error {
                     print("Error loading image: \(error)")
                 }
@@ -108,15 +106,4 @@ final class ImageLoader: ObservableObject {
         }
         
     }
-    
-//    func uploadImage(destination: Destination, id: UUID){
-//        DispatchQueue.global(qos: .default).async {
-//            let params = CLDUploadRequestParams().setFolder(destination.rawValue).setPublicId(id.uuidString)
-//            guard let imageData = self.image.jpegData(compressionQuality: 1) else {
-//                print("can't make JPEG")
-//                return
-//            }
-//            self.uploader.upload(data: imageData, uploadPreset: "news_upload", params: params)
-//        }
-//    }
 }

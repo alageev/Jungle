@@ -17,7 +17,6 @@ struct Beverage: Decodable, Identifiable {
     let bitterness: Int
     let volume: [Double]
     let price: [Int]
-//    let imageLink: String
     let tapNumber: Int
     let description: String
 }

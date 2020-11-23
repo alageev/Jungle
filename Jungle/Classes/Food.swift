@@ -13,6 +13,5 @@ struct Food: Decodable, Identifiable {
     let type: String
     let weight: Int
     let price: Int
-//    let imageLink: String
     let description: String
 }
