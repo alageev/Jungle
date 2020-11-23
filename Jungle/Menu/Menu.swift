@@ -17,8 +17,8 @@ struct Menu: View {
     init(beverages: [Beverage], foods: [Food]) {
         
         self.beverages = beverages
-        self.khachapuris = foods.filter{$0.type == "Khachapuri"}
-        self.pates = foods.filter{$0.type == "Pate"}
+        self.khachapuris = foods.filter {$0.type == "Khachapuri"}
+        self.pates = foods.filter {$0.type == "Pate"}
     }
     
     var body: some View {
@@ -37,7 +37,7 @@ struct Menu: View {
                 }
                 
                 Section(header: Text("Pates")) {
-                    ForEach(pates){ pate in
+                    ForEach(pates) { pate in
                         FoodRow(food: pate)
                     }
                 }

@@ -23,6 +23,6 @@ struct Screen: View {
 
 struct Screen_Previews: PreviewProvider {
     static var previews: some View {
-        Screen(beverages: testBeverages.filter{$0.tapNumber > 0}.sorted{$0.tapNumber < $1.tapNumber})
+        Screen(beverages: testBeverages.filter {$0.tapNumber > 0}.sorted {$0.tapNumber < $1.tapNumber})
     }
 }

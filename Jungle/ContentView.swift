@@ -16,14 +16,15 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Screen(beverages: beverageLoader.data.filter{$0.tapNumber > 0}.sorted{$0.tapNumber < $1.tapNumber})
+            Screen(beverages: beverageLoader.data.filter {$0.tapNumber > 0}.sorted {$0.tapNumber < $1.tapNumber})
                 .tabItem {
                     Image(systemName: selectedTab != 0 ? "cart" : "cart.fill")
                     Text("Screen")
                     
                 }
                 .tag(0)
-            Menu(beverages: beverageLoader.data.sorted{$0.name < $1.name}, foods: foodsLoader.data.sorted{$0.name < $1.name})
+            Menu(beverages: beverageLoader.data.sorted {$0.name < $1.name},
+                 foods: foodsLoader.data.sorted{$0.name < $1.name})
                 .tabItem {
                     Image(systemName: selectedTab != 1 ? "cart" : "cart.fill")
                     Text("Menu")
