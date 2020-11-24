@@ -19,11 +19,11 @@ struct FoodRow: View {
         }) {
             VStack(alignment: .leading) {
                 Text(food.name)
-                    .font(.title2)
+                    .font(.title3)
                     .foregroundColor(.accentColor)
-                Text(food.type)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+//                Text(food.type)
+//                    .font(.subheadline)
+//                    .foregroundColor(.secondary)
             }
         }
         .sheet(isPresented: $isPresented, content: {

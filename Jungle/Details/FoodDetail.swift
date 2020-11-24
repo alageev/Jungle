@@ -21,6 +21,7 @@ struct FoodDetail: View {
                     Text("Description")
                         .padding(.bottom)
                     Text(food.description)
+                        .padding(.trailing)
                 }
                 .padding([.leading, .top])
             }

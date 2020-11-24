@@ -15,10 +15,9 @@ struct Menu: View {
     @State var selectedOption = false
     
     init(beverages: [Beverage], foods: [Food]) {
-        
         self.beverages = beverages
-        self.khachapuris = foods.filter {$0.type == "Khachapuri"}
-        self.pates = foods.filter {$0.type == "Pate"}
+        self.khachapuris = foods.filter { $0.type == .khachapuri }
+        self.pates = foods.filter { $0.type == .pate }
     }
     
     var body: some View {

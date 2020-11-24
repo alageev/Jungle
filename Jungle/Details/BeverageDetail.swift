@@ -44,6 +44,7 @@ struct BeverageDetail: View {
                     Text("Description")
                         .padding(.bottom)
                     Text(beverage.description)
+                        .padding(.trailing)
                 }
                 .padding([.top, .leading, .bottom])
             }

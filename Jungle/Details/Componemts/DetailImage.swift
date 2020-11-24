@@ -9,20 +9,28 @@ import SwiftUI
 
 struct DetailImage: View {
     @ObservedObject var imageLoader: ImageLoader
+    @State var image: UIImage = UIImage()
     
     let name: String
     
     init (name: String, image: String) {
         self.name = name
-        self.imageLoader = ImageLoader()
-        self.imageLoader.downloadImage(from: image)
+        let imageLoader = ImageLoader()
+        imageLoader.downloadImage(from: image)
+        self.imageLoader = imageLoader
+        self.image = imageLoader.image
     }
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
-            Image(uiImage: imageLoader.image)
+            Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .onReceive(self.imageLoader.$image) { image in
+                    withAnimation {
+                        self.image = image
+                    }
+                }
             Text(name)
                 .font(.largeTitle)
                 .fontWeight(.bold)
