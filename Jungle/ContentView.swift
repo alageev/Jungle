@@ -25,7 +25,7 @@ struct ContentView: View {
             FoodsMenu(foods: foodsLoader.data)
                 .tabItem {
                     Image(systemName: selectedTab != 1 ? "cart" : "cart.fill")
-                    Text("Menu")
+                    Text("Foods")
                 }
                 .tag(1)
             Events()

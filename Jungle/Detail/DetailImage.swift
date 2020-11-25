@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct DetailImage: View {
-    @ObservedObject var imageLoader: ImageLoader
+    @ObservedObject var imageLoader = ImageLoader()
     @State var image: UIImage = UIImage()
     
     let name: String
     
     init (name: String, image: String) {
         self.name = name
-        let imageLoader = ImageLoader()
-        imageLoader.downloadImage(from: image)
-        self.imageLoader = imageLoader
+        self.imageLoader.downloadImage(from: image)
         self.image = imageLoader.image
     }
     
@@ -35,8 +33,7 @@ struct DetailImage: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .padding(.top, 40)
-                .padding(.leading)
+                .padding([.top, .leading])
                 .shadow(color: .black, radius: 5)
         }
     }

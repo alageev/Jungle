@@ -25,7 +25,7 @@ struct FoodDetail: View {
                             .padding(.trailing)
                     }
                 }
-                .padding([.leading, .top])
+                .padding([.top, .leading, .bottom])
             }
         }
     }
