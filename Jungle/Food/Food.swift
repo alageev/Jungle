@@ -10,6 +10,7 @@ import Foundation
 enum FoodType: String, Decodable {
     case khachapuri
     case pate
+    case snack
 }
 
 struct Food: Decodable, Identifiable {
@@ -18,5 +19,5 @@ struct Food: Decodable, Identifiable {
     let type: FoodType
     let weight: Int
     let price: Int
-    let description: String
+    let description: String?
 }

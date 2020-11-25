@@ -36,7 +36,7 @@ struct DetailRow: View {
 
 struct DetailRow_Previews: PreviewProvider {
     static var previews: some View {
-        DetailRow(name: "City", value: testBeverages[0].city)
+        DetailRow(name: "City", value: testBeverages[0].city!)
             .padding(.leading)
             .previewLayout(.sizeThatFits)
     }

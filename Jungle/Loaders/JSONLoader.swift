@@ -9,7 +9,6 @@ import Foundation
 
 class JSONLoader<T: Decodable>: ObservableObject {
     @Published var data: [T] = [T]()
-    var isLoaded = false
 
     init(url: URL) {
         var request = URLRequest(url: url)
@@ -20,7 +19,6 @@ class JSONLoader<T: Decodable>: ObservableObject {
                 let decodedJSON = try JSONDecoder().decode([T].self, from: data)
                 DispatchQueue.main.async {
                     self.data = decodedJSON
-                    self.isLoaded = true
                 }
             } catch {
                 print("Error decoding JSON: ", error)

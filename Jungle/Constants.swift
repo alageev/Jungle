@@ -8,8 +8,6 @@
 import SwiftUI
 import Foundation
 
-//let constants = Constants()
-
 class Constants {
     
     static let shared = Constants()

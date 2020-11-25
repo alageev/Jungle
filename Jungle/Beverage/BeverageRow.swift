@@ -1,5 +1,5 @@
 //
-//  ScreenRow.swift
+//  BeverageRow.swift
 //  Jungle
 //
 //  Created by Алексей Агеев on 25.09.2020.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScreenRow: View {
+struct BeverageRow: View {
     
     @State var isPresented = false
     
@@ -22,13 +22,17 @@ struct ScreenRow: View {
                     Text(beverage.name)
                         .font(.title3)
                         .foregroundColor(.accentColor)
-                    Text(beverage.style)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                    if let style = beverage.style {
+                        Text(style)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
                 }
-                Spacer()
-                Image(systemName: "\(beverage.tapNumber).circle.fill")
-                    .font(.system(.largeTitle))
+                if let tapNumber = beverage.tapNumber {
+                    Spacer()
+                    Image(systemName: "\(tapNumber).circle.fill")
+                        .font(.system(.largeTitle))
+                }
             }
         }
         .sheet(isPresented: $isPresented, content: {
@@ -41,9 +45,9 @@ struct ScreenRow: View {
 struct ScreenRow_Previews: PreviewProvider {
     static var previews: some View {
             Group {
-                ScreenRow(beverage: testBeverages[9])
+                BeverageRow(beverage: testBeverages[9])
                     .environment(\.sizeCategory, .extraSmall)
-                ScreenRow(beverage: testBeverages[9])
+                BeverageRow(beverage: testBeverages[9])
                     .environment(\.sizeCategory, .extraExtraExtraLarge)
             }
             .padding([.leading, .trailing])
