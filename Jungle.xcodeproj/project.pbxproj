@@ -90,8 +90,8 @@
 			children = (
 				6FECBA81252A7EB500848E2B /* Food.swift */,
 				6FECBA8C252A7EB500848E2B /* FoodsMenu.swift */,
-				6FECBA6B252A7EAB00848E2B /* FoodDetail.swift */,
 				6FECBA8B252A7EB500848E2B /* FoodRow.swift */,
+				6FECBA6B252A7EAB00848E2B /* FoodDetail.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";

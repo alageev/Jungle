@@ -21,3 +21,8 @@
 "Beverages"    = "Напитки";
 "Khachapuris"  = "Хачапури";
 "Pates"        = "Паштеты";
+"beverages_on_taps" = "Напитки на розлив";
+"alcoholic_beverages" = "Алкогольные напитки";
+"soft_drinks" = "Безалкогольные напитки";
+"Snacks" = "Снэки";
+"foods_menu" = "Еда";

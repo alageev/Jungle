@@ -47,7 +47,7 @@ struct FoodsMenu: View {
                     }
                 }
             }
-            .navigationTitle(Text("FoodsMenu"))
+            .navigationTitle(Text("foods_menu"))
             .listStyle(InsetGroupedListStyle())
         }
     }

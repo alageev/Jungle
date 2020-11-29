@@ -23,7 +23,7 @@ struct DetailImage: View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
             Image(uiImage: image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .onReceive(self.imageLoader.$image) { image in
                     withAnimation {
                         self.image = image

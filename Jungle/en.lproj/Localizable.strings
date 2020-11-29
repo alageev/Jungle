@@ -7,17 +7,22 @@
 */
 
 "Screen"       = "On the Screen";
-"Menu"         = "Menu";
-"Style"        = "Style";
-"City"         = "City";
-"Brevery"      = "Brevery";
-"ABV"          = "ABV";
-"IBU"          = "IBU";
+//"Menu"         = "Menu";
+//"Style"        = "Style";
+//"City"         = "City";
+//"Brevery"      = "Brevery";
+//"ABV"          = "ABV";
+//"IBU"          = "IBU";
 "Volume|Price" = "Volume | Price";
-"Description"  = "Description";
-"Weight"       = "Weight";
-"Price"        = "Price";
-"Events"       = "Events";
-"Beverages"    = "Beverages";
-"Khachapuris"  = "Khachapuris";
-"Pates"        = "Pates";
+//"Description"  = "Description";
+//"Weight"       = "Weight";
+//"Price"        = "Price";
+//"Events"       = "Events";
+//"Beverages"    = "Beverages";
+//"Khachapuris"  = "Khachapuris";
+//"Pates"        = "Pates";
+"beverages_on_taps" = "Beverages on taps";
+"alcoholic_beverages" = "Alcoholic beverages";
+"soft_drinks" = "Soft drinks";
+//"Snacks" = "Snacks";
+"foods_menu" = "Foods";

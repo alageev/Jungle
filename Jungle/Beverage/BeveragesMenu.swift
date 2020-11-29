@@ -25,21 +25,21 @@ struct BeveragesMenu: View {
         NavigationView {
             List {
                 if tapBeverages.count > 0 {
-                    Section(header: Text("Beverages on Taps")) {
+                    Section(header: Text("beverages_on_taps")) {
                         ForEach(tapBeverages) { beverage in
                             BeverageRow(beverage: beverage)
                         }
                     }
                 }
                 if alcoholicBeverages.count > 0 {
-                    Section(header: Text("Alcoholic beverages")) {
+                    Section(header: Text("alcoholic_beverages")) {
                         ForEach(alcoholicBeverages) { beverage in
                             BeverageRow(beverage: beverage)
                         }
                     }
                 }
                 if nonAlcoholicBeverages.count > 0 {
-                    Section(header: Text("Non-alcoholic beverages")) {
+                    Section(header: Text("soft_drinks")) {
                         ForEach(nonAlcoholicBeverages) { beverage in
                             BeverageRow(beverage: beverage)
                         }
