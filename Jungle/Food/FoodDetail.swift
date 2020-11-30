@@ -18,10 +18,10 @@ struct FoodDetail: View {
                 VStack(alignment: .leading) {
                     DetailRow(name: "Weight", value: "\(food.weight)g")
                     DetailRow(name: "Price", value: "\(food.price)₽")
-                    if food.description != nil {
+                    if let description = food.description {
                         Text("Description")
                             .padding(.bottom)
-                        Text(food.description!)
+                        Text(description)
                             .padding(.trailing)
                     }
                 }

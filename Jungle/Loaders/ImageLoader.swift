@@ -25,9 +25,10 @@ final class ImageLoader: ObservableObject {
     func downloadImage(from url: String) {
         DispatchQueue.global(qos: .userInteractive).async {
             let imageUrl = self.cloudinary.createUrl().generate(url)!
-            self.downloader.fetchImage(imageUrl, completionHandler: { (image, error) in
-                if let error = error {
-                    print("Error loading image: \(error)")
+            self.downloader.fetchImage(imageUrl, completionHandler: { image, error in
+                guard error == nil else {
+                    print("Error loading image: \(error!)")
+                    return
                 }
                 DispatchQueue.main.async {
                     self.image = image ?? UIImage(imageLiteralResourceName: "Placeholder")

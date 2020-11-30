@@ -23,7 +23,7 @@ struct BeverageDetail: View {
                         DetailRow(name: "City", value: city)
                     }
                     if let breweryName = beverage.breweryName {
-                        DetailRow(name: "Brevery", value: breweryName)
+                        DetailRow(name: "Brewery", value: breweryName)
                     }
                     if let alcohol = beverage.alcohol {
                         DetailRow(name: "ABV", value: alcohol, suffix: "%")
