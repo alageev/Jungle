@@ -10,28 +10,28 @@ import Cloudinary
 import UIKit
 
 final class ImageLoader: ObservableObject {
-    let downloader: CLDDownloader
-    let cloudinary: CLDCloudinary
-    let fileName = UUID().uuidString
     
-    @Published var image: UIImage = UIImage(imageLiteralResourceName: "Placeholder")
+    @Published var image: UIImage?
+    
+    let cloudinary: CLDCloudinary
     
     init () {
-        let config = CLDConfiguration(cloudinaryUrl: Constants.shared.cloudinary)!
-        self.cloudinary = CLDCloudinary(configuration: config)
-        self.downloader = cloudinary.createDownloader()
+        let configuration = CLDConfiguration(cloudinaryUrl: Constants.shared.cloudinaryLink)!
+        self.cloudinary = CLDCloudinary(configuration: configuration)
     }
     
     func downloadImage(from url: String) {
         DispatchQueue.global(qos: .userInteractive).async {
             let imageUrl = self.cloudinary.createUrl().generate(url)!
-            self.downloader.fetchImage(imageUrl, completionHandler: { image, error in
-                guard error == nil else {
+            self.cloudinary.createDownloader().fetchImage(imageUrl, completionHandler: { image, error in
+                guard let image = image,
+                      error == nil else {
                     print("Error loading image: \(error!)")
                     return
                 }
+                
                 DispatchQueue.main.async {
-                    self.image = image ?? UIImage(imageLiteralResourceName: "Placeholder")
+                    self.image = image
                 }
             })
         }

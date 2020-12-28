@@ -14,7 +14,7 @@ struct BeverageDetail: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                DetailImage(name: beverage.name, image: beverage.id.uuidString)
+                DetailTop(name: beverage.name, imageId: beverage.id.uuidString)
                 VStack(alignment: .leading) {
                     if let style = beverage.style {
                         DetailRow(name: "Style", value: style)

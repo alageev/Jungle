@@ -29,7 +29,7 @@
 		6FECBA99252A7EB500848E2B /* FoodsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBA8C252A7EB500848E2B /* FoodsMenu.swift */; };
 		6FECBA9C252A7F1900848E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBA9B252A7F1900848E2B /* ContentView.swift */; };
 		6FECBA9F252A7F1E00848E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA9E252A7F1E00848E2B /* Assets.xcassets */; };
-		6FECBAA3252A7F6300848E2B /* DetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBAA2252A7F6300848E2B /* DetailImage.swift */; };
+		6FECBAA3252A7F6300848E2B /* DetailTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBAA2252A7F6300848E2B /* DetailTop.swift */; };
 		6FECBAA6252A7F7F00848E2B /* DetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBAA5252A7F7F00848E2B /* DetailRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		6FECBA8C252A7EB500848E2B /* FoodsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsMenu.swift; sourceTree = "<group>"; };
 		6FECBA9B252A7F1900848E2B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FECBA9E252A7F1E00848E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6FECBAA2252A7F6300848E2B /* DetailImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImage.swift; sourceTree = "<group>"; };
+		6FECBAA2252A7F6300848E2B /* DetailTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTop.swift; sourceTree = "<group>"; };
 		6FECBAA5252A7F7F00848E2B /* DetailRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				6FECBAA5252A7F7F00848E2B /* DetailRow.swift */,
-				6FECBAA2252A7F6300848E2B /* DetailImage.swift */,
+				6FECBAA2252A7F6300848E2B /* DetailTop.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					6FECBA40252A7D7A00848E2B = {
 						CreatedOnToolsVersion = 12.2;
@@ -251,7 +251,7 @@
 			files = (
 				6FECBA92252A7EB500848E2B /* Food.swift in Sources */,
 				6FECBA90252A7EB500848E2B /* Beverage.swift in Sources */,
-				6FECBAA3252A7F6300848E2B /* DetailImage.swift in Sources */,
+				6FECBAA3252A7F6300848E2B /* DetailTop.swift in Sources */,
 				6FECBAA6252A7F7F00848E2B /* DetailRow.swift in Sources */,
 				6FECBA98252A7EB500848E2B /* FoodRow.swift in Sources */,
 				6FECBA97252A7EB500848E2B /* Events.swift in Sources */,
@@ -288,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -349,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
