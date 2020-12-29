@@ -17,8 +17,7 @@ struct BeveragesMenu: View {
         tapBeverages = beverages.filter { $0.tapNumber != nil }.sorted { $0.tapNumber! < $1.tapNumber! }
         let notTapBeverages = beverages.filter { $0.tapNumber == nil }.sorted { $0.name < $1.name }
         alcoholicBeverages = notTapBeverages.filter { $0.alcohol != nil }
-        nonAlcoholicBeverages = notTapBeverages.filter { $0.alcohol == nil }
-            .sorted { $0.style ?? " " < $1.style ?? " "}
+        nonAlcoholicBeverages = notTapBeverages.filter { $0.alcohol == nil }.sorted { $0.style ?? " " < $1.style ?? " "}
     }
     
     var body: some View {

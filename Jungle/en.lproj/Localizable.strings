@@ -26,3 +26,5 @@
 "soft_drinks" = "Soft drinks";
 //"Snacks" = "Snacks";
 "foods_menu" = "Foods";
+"error_loading_text" = "Cannot load data. Please check your internet connection.";
+"try_load" = "Try again";
