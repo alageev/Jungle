@@ -41,7 +41,7 @@ struct BeverageRow: View {
         
     }
 }
-
+#if DEBUG
 struct ScreenRow_Previews: PreviewProvider {
     static var previews: some View {
             Group {
@@ -54,3 +54,4 @@ struct ScreenRow_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
+#endif

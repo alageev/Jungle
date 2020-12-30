@@ -30,7 +30,7 @@ struct FoodDetail: View {
         }
     }
 }
-
+#if DEBUG
 struct FoodDetail_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -45,3 +45,4 @@ struct FoodDetail_Previews: PreviewProvider {
         }
     }
 }
+#endif

@@ -19,10 +19,10 @@ struct ErrorLoadingView: View {
         }
     }
 }
-
+#if DEBUG
 struct ErrorLoadingView_Previews: PreviewProvider {
     static var previews: some View {
         ErrorLoadingView(dataLoader: DataLoader())
-//        EmptyView()
     }
 }
+#endif

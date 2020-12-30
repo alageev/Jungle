@@ -45,10 +45,11 @@ struct DetailTop: View {
         })
     }
 }
-
+#if DEBUG
 struct DetailTop_Previews: PreviewProvider {
     static var previews: some View {
         DetailTop(name: testBeverages[0].name, imageId: testBeverages[0].id.uuidString)
             .previewLayout(.sizeThatFits)
     }
 }
+#endif

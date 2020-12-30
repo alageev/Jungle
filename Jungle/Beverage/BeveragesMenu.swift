@@ -50,9 +50,10 @@ struct BeveragesMenu: View {
         }
     }
 }
-
+#if DEBUG
 struct Screen_Previews: PreviewProvider {
     static var previews: some View {
         BeveragesMenu(beverages: testBeverages)
     }
 }
+#endif

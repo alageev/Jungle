@@ -52,9 +52,10 @@ struct FoodsMenu: View {
         }
     }
 }
-
+#if DEBUG
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {
         FoodsMenu(foods: testFoods)
     }
 }
+#endif

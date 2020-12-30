@@ -14,9 +14,10 @@ struct Events: View {
         EmptyView()
     }
 }
-
+#if DEBUG
 struct Events_Previews: PreviewProvider {
     static var previews: some View {
         Events()
     }
 }
+#endif

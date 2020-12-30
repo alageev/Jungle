@@ -31,7 +31,7 @@ struct FoodRow: View {
         })
     }
 }
-
+#if DEBUG
 struct FoodRow_Previews: PreviewProvider {
     static var previews: some View {
         FoodRow(food: testFoods[0])
@@ -39,3 +39,4 @@ struct FoodRow_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
+#endif

@@ -33,7 +33,7 @@ struct DetailRow: View {
         }
     }
 }
-
+#if DEBUG
 struct DetailRow_Previews: PreviewProvider {
     static var previews: some View {
         DetailRow(name: "City", value: testBeverages[0].city!)
@@ -41,3 +41,4 @@ struct DetailRow_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
+#endif
