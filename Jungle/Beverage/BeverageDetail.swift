@@ -49,15 +49,12 @@ struct BeverageDetail: View {
                             }
                         }
                         .padding(.trailing)
+                        Divider()
                     } else {
                         DetailRow(name: "Price", value: "\(beverage.price[0])")
                     }
                     if let description = beverage.description {
-                        Divider()
-                        Text("Description")
-                            .padding(.bottom)
-                        Text(description)
-                            .padding(.trailing)
+                        DescriptionView(description)
                     }
                 }
                 .padding([.top, .leading, .bottom])
@@ -65,6 +62,7 @@ struct BeverageDetail: View {
         }
     }
 }
+
 #if DEBUG
 struct BeverageDetail_Previews: PreviewProvider {
     static var previews: some View {

@@ -14,7 +14,7 @@ struct FoodsMenu: View {
     
     @State var selectedOption = false
     
-    init(foods: [Food]) {
+    init(_ foods: [Food]) {
         let sortedFoods = foods.sorted { $0.name < $1.name }
         self.khachapuris = sortedFoods.filter { $0.type == .khachapuri }
         self.pates = sortedFoods.filter { $0.type == .pate }
@@ -52,10 +52,11 @@ struct FoodsMenu: View {
         }
     }
 }
+
 #if DEBUG
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {
-        FoodsMenu(foods: testFoods)
+        FoodsMenu(testFoods)
     }
 }
 #endif

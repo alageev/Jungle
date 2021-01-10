@@ -14,28 +14,29 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            BeveragesMenu(beverages: dataLoader.beverages)
+            BeveragesMenu(dataLoader.beverages)
                 .tabItem {
                     Image(systemName: selectedTab != 0 ? "cart" : "cart.fill")
                     Text("Beverages")
-                    
+
                 }
                 .tag(0)
-            FoodsMenu(foods: dataLoader.foods)
+            FoodsMenu(dataLoader.foods)
                 .tabItem {
                     Image(systemName: selectedTab != 1 ? "cart" : "cart.fill")
                     Text("foods_menu")
                 }
                 .tag(1)
-            Events()
+            EventsTab(dataLoader.events)
                 .tabItem {
-                    Image(systemName: selectedTab != 2 ? "cart" : "cart.fill")
+                    Image(systemName: selectedTab != 2 ? "ticket" : "ticket.fill")
                     Text("Events")
                 }
                 .tag(2)
         }
     }
 }
+
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

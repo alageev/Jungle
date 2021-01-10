@@ -32,7 +32,7 @@ struct DetailTop: View {
                 .fontWeight(.bold)
                 .foregroundColor(withImage ? .white : .primary)
                 .padding([.top, .leading])
-                .shadow(color: withImage ? .black : .clear, radius: 5) //rethink usage when withImage == false
+                .shadow(color: withImage ? .black : .clear, radius: 5)
                 .fixedSize(horizontal: false, vertical: true)
                 .transition(.opacity)
         }.onReceive(imageLoader.$image, perform: { image in
@@ -45,6 +45,7 @@ struct DetailTop: View {
         })
     }
 }
+
 #if DEBUG
 struct DetailTop_Previews: PreviewProvider {
     static var previews: some View {

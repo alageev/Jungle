@@ -1,38 +1,41 @@
 //
-//  FoodRow.swift
+//  EventRow.swift
 //  Jungle
 //
-//  Created by Алексей Агеев on 26.09.2020.
+//  Created by Алексей Агеев on 10.01.2021.
 //
 
 import SwiftUI
 
-struct FoodRow: View {
+struct EventRow: View {
     
     @State var isPresented = false
     
-    let food: Food
+    let event: Event
     
     var body: some View {
         Button(action: {
             isPresented.toggle()
         }) {
             VStack(alignment: .leading) {
-                Text(food.name)
+                Text(event.title)
                     .font(.title3)
                     .foregroundColor(.accentColor)
+                Text("\(event.date.day()) \(event.date.month()) \(event.date.year())")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
             }
         }
         .sheet(isPresented: $isPresented, content: {
-            FoodDetail(food: food)
+            EventsDetail(event: event)
         })
     }
 }
 
 #if DEBUG
-struct FoodRow_Previews: PreviewProvider {
+struct EventRow_Previews: PreviewProvider {
     static var previews: some View {
-        FoodRow(food: testFoods[0])
+        EventRow(event: testEvents[0])
             .padding()
             .previewLayout(.sizeThatFits)
     }

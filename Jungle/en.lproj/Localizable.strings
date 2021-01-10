@@ -28,3 +28,5 @@
 "foods_menu" = "Foods";
 "error_loading_text" = "Cannot load data. Please check your internet connection.";
 "try_load" = "Try again";
+"upcoming_events" = "Upcoming events";
+"past_events" = "Past events";

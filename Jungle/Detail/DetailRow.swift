@@ -33,11 +33,15 @@ struct DetailRow: View {
         }
     }
 }
+
 #if DEBUG
 struct DetailRow_Previews: PreviewProvider {
     static var previews: some View {
         DetailRow(name: "City", value: testBeverages[0].city!)
-            .padding(.leading)
+            .padding()
+            .previewLayout(.sizeThatFits)
+        DetailRow(name: "Alcohol", value: testBeverages[0].alcohol!, suffix: "%")
+            .padding()
             .previewLayout(.sizeThatFits)
     }
 }

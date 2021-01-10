@@ -13,7 +13,7 @@ struct BeveragesMenu: View {
     let alcoholicBeverages: [Beverage]
     let nonAlcoholicBeverages: [Beverage]
     
-    init(beverages: [Beverage]) {
+    init(_ beverages: [Beverage]) {
         tapBeverages = beverages.filter { $0.tapNumber != nil }.sorted { $0.tapNumber! < $1.tapNumber! }
         let notTapBeverages = beverages.filter { $0.tapNumber == nil }.sorted { $0.name < $1.name }
         alcoholicBeverages = notTapBeverages.filter { $0.alcohol != nil }
@@ -50,10 +50,11 @@ struct BeveragesMenu: View {
         }
     }
 }
+
 #if DEBUG
 struct Screen_Previews: PreviewProvider {
     static var previews: some View {
-        BeveragesMenu(beverages: testBeverages)
+        BeveragesMenu(testBeverages)
     }
 }
 #endif

@@ -10,14 +10,14 @@ import Foundation
 final class DataLoader: ObservableObject {
     @Published var beverages: [Beverage] = []
     @Published var foods: [Food] = []
+    @Published var events: [Event] = []
 
-    @Published var loaded: () -> Bool = { false }
-
+//    @Published var loaded: () -> Bool = { false }
     
     init() {
-        loaded = {
-            self.beverages.count > 0 && self.foods.count > 0
-        }
+//        loaded = {
+//            self.beverages.count > 0 && self.foods.count > 0
+//        }
         self.load()
     }
     
@@ -54,5 +54,20 @@ final class DataLoader: ObservableObject {
             }
         }.resume()
         
+        URLSession.shared.dataTask(with: Constants.shared.events) { data, _, error in
+            do {
+                guard let data = data else {
+                    return
+                }
+                let foods = try JSONDecoder().decode([Event].self, from: data)
+                
+                DispatchQueue.main.async {
+                    self.events = foods
+                }
+                
+            } catch {
+                print("Error decoding JSON: ", error)
+            }
+        }.resume()
     }
 }

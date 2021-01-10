@@ -41,6 +41,7 @@ struct BeverageRow: View {
         
     }
 }
+
 #if DEBUG
 struct ScreenRow_Previews: PreviewProvider {
     static var previews: some View {
@@ -50,7 +51,7 @@ struct ScreenRow_Previews: PreviewProvider {
                 BeverageRow(beverage: testBeverages[9])
                     .environment(\.sizeCategory, .extraExtraExtraLarge)
             }
-            .padding([.leading, .trailing])
+            .padding()
             .previewLayout(.sizeThatFits)
     }
 }

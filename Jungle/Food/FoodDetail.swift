@@ -19,10 +19,7 @@ struct FoodDetail: View {
                     DetailRow(name: "Weight", value: "\(food.weight)g")
                     DetailRow(name: "Price", value: "\(food.price)₽")
                     if let description = food.description {
-                        Text("Description")
-                            .padding(.bottom)
-                        Text(description)
-                            .padding(.trailing)
+                        DescriptionView(description)
                     }
                 }
                 .padding([.top, .leading, .bottom])
@@ -30,19 +27,13 @@ struct FoodDetail: View {
         }
     }
 }
+
 #if DEBUG
 struct FoodDetail_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            FoodDetail(food: testFoods[0])
-                .preferredColorScheme(.light)
-                .previewLayout(.sizeThatFits)
-            FoodDetail(food: testFoods[0])
-                .preferredColorScheme(.dark)
-                .environment(\.sizeCategory, .extraExtraExtraLarge)
-                .previewLayout(.sizeThatFits)
-            
-        }
+        FoodDetail(food: testFoods[0])
+//            .preferredColorScheme(.light)
+            .previewLayout(.sizeThatFits)
     }
 }
 #endif
