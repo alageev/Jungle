@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct BeverageRow: View {
-    
-    @State var isPresented = false
-    
     let beverage: Beverage
     
+    @Binding var selection: Beverage?
+    
     var body: some View {
-        Button(action: {
-            isPresented.toggle()
-        }) {
+        Button(action: selectBeverage) {
             HStack {
                 VStack(alignment: .leading) {
                     Text(beverage.name)
@@ -35,22 +32,18 @@ struct BeverageRow: View {
                 }
             }
         }
-        .sheet(isPresented: $isPresented, content: {
-            BeverageDetail(beverage: beverage)
-        })
-        
+    }
+    
+    func selectBeverage() {
+        selection = beverage
     }
 }
 
 #if DEBUG
 struct ScreenRow_Previews: PreviewProvider {
     static var previews: some View {
-            Group {
-                BeverageRow(beverage: testBeverages[9])
-                    .environment(\.sizeCategory, .extraSmall)
-                BeverageRow(beverage: testBeverages[9])
-                    .environment(\.sizeCategory, .extraExtraExtraLarge)
-            }
+        BeverageRow(beverage: testBeverages[9], selection: .constant(testBeverages[0]))
+            .environment(\.sizeCategory, .extraSmall)
             .padding()
             .previewLayout(.sizeThatFits)
     }

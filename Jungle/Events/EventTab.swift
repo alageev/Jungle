@@ -1,63 +1,48 @@
 //
-//  EventsTab.swift
+//  EventTab.swift
 //  Jungle
 //
-//  Created by Алексей Агеев on 28.09.2020.
+//  Created by Алексей Агеев on 16.01.2021.
 //
 
 import SwiftUI
+import Combine
 
-struct EventsTab: View {
-//    let events: [Event]
-    let upcomingEvents: [Event]?
-    let pastEvents: [Event]?
+struct EventTab: View {
+    
+    @State var selectedEvent: Event?
+    
+    let events: [Event]
     
     init(_ events: [Event]) {
-        let sortedEvents = events.sorted(by: { $0.date > $1.date })
-        upcomingEvents = sortedEvents.filter({$0.date > Date()})
-        pastEvents = sortedEvents.filter({$0.date < Date()})
+        self.events = events
     }
     
     var body: some View {
         NavigationView {
             List {
-                if let upcomingEvents = upcomingEvents {
-                    Section(header: Text("upcoming_events")) {
-                        if upcomingEvents.count > 0 {
-                            ForEach (upcomingEvents) { event in
-                                EventRow(event: event)
-                            }
-                        } else {
-                            HStack {
-                                Spacer()
-                                Text("Упc… мы пока что ничего не придумали")
-                                    .multilineTextAlignment(.center)
-                                    .font(.title3)
-                                    .foregroundColor(.accentColor)
-                                Spacer()
-                            }
-                        }
-                    }
-                }
-                if let pastEvents = pastEvents {
-                    Section(header: Text("past_events")) {
-                        ForEach (pastEvents) { event in
-                            EventRow(event: event)
-                        }
+                ForEach(events) { event in
+                    Section {
+                        EventView(event, selection: $selectedEvent)
+                            .listRowInsets(EdgeInsets())
                     }
                 }
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Events")
         }
+        .sheet(item: $selectedEvent) { event in
+            EventsDetail(event: event)
+        }
     }
 }
 
 #if DEBUG
-struct Events_Previews: PreviewProvider {
+struct EventTab_Previews: PreviewProvider {
     static var previews: some View {
-        EventsTab(testEvents)
-        
+        TabView {
+            EventTab(testEvents)
+        }
     }
 }
 #endif

@@ -11,6 +11,10 @@ struct EventsDetail: View {
 //    @ObservedObject var imageLoader = ImageLoader()
     let event: Event
     
+    init(event: Event) {
+        self.event = event
+    }
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -26,6 +30,7 @@ struct EventsDetail: View {
                     DescriptionView(event.description)
                 }
                 .padding([.top, .leading, .bottom])
+                .navigationTitle(Text(event.title))
             }
         }
     }

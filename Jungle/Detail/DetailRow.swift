@@ -17,8 +17,10 @@ struct DetailRow: View {
     }
     
     init (name: String, value: Double, suffix: String) {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.usesSignificantDigits = true
         self.name = LocalizedStringKey(name)
-        self.value = String(format: "%.1f", value) + suffix
+        self.value = numberFormatter.string(from: NSNumber(value: value))! + suffix
     }
         
     var body: some View {
@@ -37,12 +39,12 @@ struct DetailRow: View {
 #if DEBUG
 struct DetailRow_Previews: PreviewProvider {
     static var previews: some View {
-        DetailRow(name: "City", value: testBeverages[0].city!)
-            .padding()
-            .previewLayout(.sizeThatFits)
-        DetailRow(name: "Alcohol", value: testBeverages[0].alcohol!, suffix: "%")
-            .padding()
-            .previewLayout(.sizeThatFits)
+        VStack {
+            DetailRow(name: "City", value: testBeverages[0].city!)
+            DetailRow(name: "Alcohol", value: testBeverages[0].alcohol!, suffix: "%")
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
 }
 #endif

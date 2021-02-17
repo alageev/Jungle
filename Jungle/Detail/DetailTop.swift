@@ -20,29 +20,37 @@ struct DetailTop: View {
     }
     
     var body: some View {
-        ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
-            if withImage {
-                Image(uiImage: imageLoader.image!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .transition(.opacity)
-            }
+        if withImage {
+            Image(uiImage: imageLoader.image!)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .transition(.opacity)
+                .overlay(Text(name)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(withImage ? .white : .primary)
+                            .padding([.top, .leading])
+                            .shadow(radius: 5)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .transition(.opacity),
+                    alignment: .topLeading)
+        } else {
             Text(name)
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(withImage ? .white : .primary)
+                .foregroundColor(.primary)
                 .padding([.top, .leading])
-                .shadow(color: withImage ? .black : .clear, radius: 5)
                 .fixedSize(horizontal: false, vertical: true)
                 .transition(.opacity)
-        }.onReceive(imageLoader.$image, perform: { image in
-            guard image != nil else {
-                return
-            }
-            withAnimation(.easeInOut(duration: 0.5)) {
-                withImage = true
-            }
-        })
+                .onReceive(imageLoader.$image, perform: { image in
+                    guard image != nil else {
+                        return
+                    }
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        withImage = true
+                    }
+                })
+        }
     }
 }
 

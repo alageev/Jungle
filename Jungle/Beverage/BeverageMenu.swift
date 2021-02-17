@@ -1,5 +1,5 @@
 //
-//  BeveragesMenu.swift
+//  BeverageMenu.swift
 //  Jungle
 //
 //  Created by Алексей Агеев on 25.09.2020.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct BeveragesMenu: View {
+struct BeverageMenu: View {
+    
+    @State var selectedBeverage: Beverage?
     
     let tapBeverages: [Beverage]
     let alcoholicBeverages: [Beverage]
@@ -26,35 +28,38 @@ struct BeveragesMenu: View {
                 if tapBeverages.count > 0 {
                     Section(header: Text("beverages_on_taps")) {
                         ForEach(tapBeverages) { beverage in
-                            BeverageRow(beverage: beverage)
+                            BeverageRow(beverage: beverage, selection: $selectedBeverage)
                         }
                     }
                 }
                 if alcoholicBeverages.count > 0 {
                     Section(header: Text("alcoholic_beverages")) {
                         ForEach(alcoholicBeverages) { beverage in
-                            BeverageRow(beverage: beverage)
+                            BeverageRow(beverage: beverage, selection: $selectedBeverage)
                         }
                     }
                 }
                 if nonAlcoholicBeverages.count > 0 {
                     Section(header: Text("soft_drinks")) {
                         ForEach(nonAlcoholicBeverages) { beverage in
-                            BeverageRow(beverage: beverage)
+                            BeverageRow(beverage: beverage, selection: $selectedBeverage)
                         }
                     }
                 }
             }
             .listStyle(InsetGroupedListStyle())
+            .sheet(item: $selectedBeverage) { beverage in
+                BeverageDetail(beverage)
+            }
             .navigationTitle(Text("Beverages"))
         }
     }
 }
 
 #if DEBUG
-struct Screen_Previews: PreviewProvider {
+struct BeverageMenu_Previews: PreviewProvider {
     static var previews: some View {
-        BeveragesMenu(testBeverages)
+        BeverageMenu(testBeverages)
     }
 }
 #endif

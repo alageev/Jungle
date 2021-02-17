@@ -10,6 +10,12 @@ import SwiftUI
 struct BeverageDetail: View {
     
     let beverage: Beverage
+    let numberFormatter = NumberFormatter()
+    
+    init(_ beverage: Beverage) {
+        self.beverage = beverage
+        numberFormatter.usesSignificantDigits = true
+    }
     
     var body: some View {
         ScrollView {
@@ -31,27 +37,28 @@ struct BeverageDetail: View {
                     if let bitterness = beverage.bitterness {
                         DetailRow(name: "IBU", value: "\(bitterness)")
                     }
-                    if let volume = beverage.volume {
+                    if let volume = beverage.volume,
+                       let price = beverage.price {
                         HStack {
                             Text("Volume|Price")
                             Spacer()
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text("\(volume[0], specifier: "%.2f")")
-                                    Text("\(beverage.price[0])₽")
-                                }
-                                if volume.count > 1 {
-                                    HStack {
-                                        Text("\(volume[1], specifier: "%.2f")")
-                                        Text("\(beverage.price[1])₽")
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    ForEach (volume, id: \.self) { volume in
+                                        Text(numberFormatter.string(from: NSNumber(value: volume)) ?? "")
                                     }
                                 }
+                                
+                                VStack(alignment: .trailing) {
+                                    ForEach (price, id: \.self) { price in
+                                        Text("\(price)₽")
+                                    }
+                                }
+                                
                             }
                         }
                         .padding(.trailing)
                         Divider()
-                    } else {
-                        DetailRow(name: "Price", value: "\(beverage.price[0])")
                     }
                     if let description = beverage.description {
                         DescriptionView(description)
@@ -67,10 +74,10 @@ struct BeverageDetail: View {
 struct BeverageDetail_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            BeverageDetail(beverage: testBeverages[11])
+            BeverageDetail(testBeverages[11])
                 .preferredColorScheme(.light)
                 .previewLayout(.sizeThatFits)
-            BeverageDetail(beverage: testBeverages[11])
+            BeverageDetail(testBeverages[11])
                 .preferredColorScheme(.dark)
                 .environment(\.sizeCategory, .extraExtraExtraLarge)
                 .previewLayout(.sizeThatFits)
