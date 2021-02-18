@@ -20,7 +20,7 @@ final class ImageLoader: ObservableObject {
         self.cloudinary = CLDCloudinary(configuration: configuration)
     }
     
-    func downloadImage(from url: String) {
+    func loadImage(for url: String) {
         DispatchQueue.global(qos: .userInteractive).async {
             let transformation = CLDTransformation().setWidth(Int(UIScreen.main.bounds.width * UIScreen.main.scale))
             let imageUrl = self.cloudinary.createUrl().setTransformation(transformation).generate(url)!

@@ -9,24 +9,22 @@ import Foundation
 
 final class DataLoader: ObservableObject {
     @Published var beverages: [Beverage] = []
-    @Published var foods: [Food] = []
+    @Published var food: [Food] = []
     @Published var events: [Event] = []
 
-//    @Published var loaded: () -> Bool = { false }
-    
     init() {
-//        loaded = {
-//            self.beverages.count > 0 && self.foods.count > 0
-//        }
-        self.load()
+        loadBeverages()
+        loadFood()
+        loadEvents()
     }
     
-    func load() {
+    private func loadBeverages() {
         URLSession.shared.dataTask(with: Constants.shared.beverages) { data, _, error in
             do {
                 guard let data = data else {
                     return
                 }
+                
                 let beverages = try JSONDecoder().decode([Beverage].self, from: data)
                 
                 DispatchQueue.main.async {
@@ -37,32 +35,38 @@ final class DataLoader: ObservableObject {
                 print("Error decoding JSON: ", error)
             }
         }.resume()
-        
+    }
+    
+    private func loadFood() {
         URLSession.shared.dataTask(with: Constants.shared.foods) { data, _, error in
             do {
                 guard let data = data else {
                     return
                 }
-                let foods = try JSONDecoder().decode([Food].self, from: data)
+                
+                let food = try JSONDecoder().decode([Food].self, from: data)
                 
                 DispatchQueue.main.async {
-                    self.foods = foods
+                    self.food = food
                 }
                 
             } catch {
                 print("Error decoding JSON: ", error)
             }
         }.resume()
-        
+    }
+    
+    private func loadEvents() {
         URLSession.shared.dataTask(with: Constants.shared.events) { data, _, error in
             do {
                 guard let data = data else {
                     return
                 }
-                let foods = try JSONDecoder().decode([Event].self, from: data)
+                
+                let events = try JSONDecoder().decode([Event].self, from: data)
                 
                 DispatchQueue.main.async {
-                    self.events = foods
+                    self.events = events
                 }
                 
             } catch {

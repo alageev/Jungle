@@ -37,24 +37,27 @@ struct BeverageDetail: View {
                     if let bitterness = beverage.bitterness {
                         DetailRow(name: "IBU", value: "\(bitterness)")
                     }
-                    if let volume = beverage.volume,
-                       let price = beverage.price {
+                    if let price = beverage.price {
                         HStack {
-                            Text("Volume|Price")
+                            if beverage.volume != nil {
+                                Text("Volume|Price")
+                            } else {
+                                Text("Price")
+                            }
                             Spacer()
                             HStack {
-                                VStack(alignment: .leading) {
-                                    ForEach (volume, id: \.self) { volume in
-                                        Text(numberFormatter.string(from: NSNumber(value: volume)) ?? "")
+                                if let volume = beverage.volume {
+                                    VStack(alignment: .leading) {
+                                        ForEach (volume, id: \.self) { volume in
+                                            Text(numberFormatter.string(from: NSNumber(value: volume)) ?? "")
+                                        }
                                     }
                                 }
-                                
                                 VStack(alignment: .trailing) {
                                     ForEach (price, id: \.self) { price in
                                         Text("\(price)₽")
                                     }
                                 }
-                                
                             }
                         }
                         .padding(.trailing)

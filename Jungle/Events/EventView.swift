@@ -16,7 +16,7 @@ struct EventView: View {
     init (_ event: Event, selection: Binding<Event?>) {
         self.event = event
         self._selection = selection
-        imageLoader.downloadImage(from: event.id.uuidString)
+        imageLoader.loadImage(for: event.id.uuidString)
     }
     
     var body: some View {

@@ -16,7 +16,7 @@ struct DetailTop: View {
     
     init (name: String, imageId: String) {
         self.name = name
-        self.imageLoader.downloadImage(from: imageId)
+        self.imageLoader.loadImage(for: imageId)
     }
     
     var body: some View {
@@ -25,20 +25,20 @@ struct DetailTop: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .transition(.opacity)
-                .overlay(Text(name)
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(withImage ? .white : .primary)
-                            .padding([.top, .leading])
-                            .shadow(radius: 5)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .transition(.opacity),
+                .overlay(
+                    Text(name)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding([.top, .leading])
+                        .shadow(radius: 5)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .transition(.opacity),
                     alignment: .topLeading)
         } else {
             Text(name)
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(.primary)
                 .padding([.top, .leading])
                 .fixedSize(horizontal: false, vertical: true)
                 .transition(.opacity)
