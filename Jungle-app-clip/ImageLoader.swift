@@ -16,7 +16,7 @@ final class ImageLoader: ObservableObject {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
+        URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else {
                 return
             }

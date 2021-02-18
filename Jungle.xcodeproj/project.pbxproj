@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6F05C7A325ABA03200388E69 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F05C7A225ABA03200388E69 /* Extensions.swift */; };
 		6F26F922253E001700698806 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F26F924253E001700698806 /* Localizable.strings */; };
-		6F26F92E253E03BB00698806 /* testBeverages.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA5F252A7E0000848E2B /* testBeverages.json */; };
 		6F26F930253E03D900698806 /* testFoods.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA60252A7E0000848E2B /* testFoods.json */; };
 		6F5D8BF225B33256006E2DA6 /* EventTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D8BF125B33256006E2DA6 /* EventTab.swift */; };
 		6F6D6C30256ABF0B00FC3251 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 6F6D6C2F256ABF0B00FC3251 /* Cloudinary */; };
@@ -35,12 +34,13 @@
 		6F78E4EB25DEA223006AE109 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBA71252A7EAB00848E2B /* Constants.swift */; };
 		6F78E4EE25DEA225006AE109 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F05C7A225ABA03200388E69 /* Extensions.swift */; };
 		6F78E4F325DEA245006AE109 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBA7C252A7EB500848E2B /* Data.swift */; };
-		6F78E4F625DEA246006AE109 /* testBeverages.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA5F252A7E0000848E2B /* testBeverages.json */; };
 		6F78E4F925DEA248006AE109 /* testEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FFF698925AB396E00D790AD /* testEvents.json */; };
 		6F78E4FC25DEA24A006AE109 /* testFoods.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA60252A7E0000848E2B /* testFoods.json */; };
 		6F78E50225DEA27E006AE109 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F78E50125DEA27E006AE109 /* ImageLoader.swift */; };
 		6F78E50525DEA6AE006AE109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA9E252A7F1E00848E2B /* Assets.xcassets */; };
 		6F78E51D25DED0FA006AE109 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F26F924253E001700698806 /* Localizable.strings */; };
+		6F78E52A25DEFB44006AE109 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA54252A7DDA00848E2B /* Launch Screen.storyboard */; };
+		6F78E53925DEFD3F006AE109 /* testBeverages.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F78E53825DEFD3E006AE109 /* testBeverages.json */; };
 		6FE757FD25B252FF004E2115 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE757FC25B252FF004E2115 /* EventView.swift */; };
 		6FECBA45252A7D7A00848E2B /* JungleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBA44252A7D7A00848E2B /* JungleApp.swift */; };
 		6FECBA55252A7DDA00848E2B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA54252A7DDA00848E2B /* Launch Screen.storyboard */; };
@@ -102,12 +102,12 @@
 		6F78E49F25DEA1BD006AE109 /* Jungle_app_clip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jungle_app_clip.entitlements; sourceTree = "<group>"; };
 		6F78E50125DEA27E006AE109 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		6F78E51625DECE11006AE109 /* Jungle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jungle.entitlements; sourceTree = "<group>"; };
+		6F78E53825DEFD3E006AE109 /* testBeverages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testBeverages.json; sourceTree = "<group>"; };
 		6FE757FC25B252FF004E2115 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		6FECBA41252A7D7A00848E2B /* Jungle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jungle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FECBA44252A7D7A00848E2B /* JungleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JungleApp.swift; sourceTree = "<group>"; };
 		6FECBA4D252A7D7B00848E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FECBA54252A7DDA00848E2B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		6FECBA5F252A7E0000848E2B /* testBeverages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = testBeverages.json; path = "Jungle/Preview Content/testBeverages.json"; sourceTree = SOURCE_ROOT; };
 		6FECBA60252A7E0000848E2B /* testFoods.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testFoods.json; sourceTree = "<group>"; };
 		6FECBA64252A7E5A00848E2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6FECBA6B252A7EAB00848E2B /* FoodDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetail.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6F3F56DD256E045D00059C90 /* Beverage */ = {
+		6F3F56DD256E045D00059C90 /* Beverages */ = {
 			isa = PBXGroup;
 			children = (
 				6FECBA7F252A7EB500848E2B /* Beverage.swift */,
@@ -159,7 +159,7 @@
 				6FECBA86252A7EB500848E2B /* BeverageRow.swift */,
 				6FECBA6D252A7EAB00848E2B /* BeverageDetail.swift */,
 			);
-			path = Beverage;
+			path = Beverages;
 			sourceTree = "<group>";
 		};
 		6F3F56E0256E049A00059C90 /* Food */ = {
@@ -176,17 +176,45 @@
 		6F78E49425DEA1BC006AE109 /* Jungle-app-clip */ = {
 			isa = PBXGroup;
 			children = (
-				6F78E49F25DEA1BD006AE109 /* Jungle_app_clip.entitlements */,
 				6F78E49525DEA1BC006AE109 /* Jungle_app_clipApp.swift */,
-				6F78E49E25DEA1BD006AE109 /* Info.plist */,
 				6F78E50125DEA27E006AE109 /* ImageLoader.swift */,
+				6F78E49E25DEA1BD006AE109 /* Info.plist */,
+				6F78E49F25DEA1BD006AE109 /* Jungle_app_clip.entitlements */,
 			);
 			path = "Jungle-app-clip";
+			sourceTree = "<group>";
+		};
+		6F78E52925DEFB28006AE109 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				6F26F924253E001700698806 /* Localizable.strings */,
+				6FECBA54252A7DDA00848E2B /* Launch Screen.storyboard */,
+				6FECBA9B252A7F1900848E2B /* ContentView.swift */,
+				6F3F56DD256E045D00059C90 /* Beverages */,
+				6F3F56E0256E049A00059C90 /* Food */,
+				6FECBA88252A7EB500848E2B /* Events */,
+				6F78E52D25DEFB5E006AE109 /* Loaders */,
+				6FECBAAD252A811E00848E2B /* Detail */,
+				6FECBA71252A7EAB00848E2B /* Constants.swift */,
+				6F05C7A225ABA03200388E69 /* Extensions.swift */,
+				6FECBA9E252A7F1E00848E2B /* Assets.xcassets */,
+				6FECBA4A252A7D7B00848E2B /* Preview Content */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		6F78E52D25DEFB5E006AE109 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				6FECBA84252A7EB500848E2B /* DataLoader.swift */,
+			);
+			path = Loaders;
 			sourceTree = "<group>";
 		};
 		6FECBA38252A7D7A00848E2B = {
 			isa = PBXGroup;
 			children = (
+				6F78E52925DEFB28006AE109 /* Shared */,
 				6FECBA43252A7D7A00848E2B /* Jungle */,
 				6F78E49425DEA1BC006AE109 /* Jungle-app-clip */,
 				6FECBA42252A7D7A00848E2B /* Products */,
@@ -205,21 +233,10 @@
 		6FECBA43252A7D7A00848E2B /* Jungle */ = {
 			isa = PBXGroup;
 			children = (
-				6F78E51625DECE11006AE109 /* Jungle.entitlements */,
-				6F26F924253E001700698806 /* Localizable.strings */,
-				6FECBA54252A7DDA00848E2B /* Launch Screen.storyboard */,
 				6FECBA44252A7D7A00848E2B /* JungleApp.swift */,
-				6FECBA9B252A7F1900848E2B /* ContentView.swift */,
-				6F3F56DD256E045D00059C90 /* Beverage */,
-				6F3F56E0256E049A00059C90 /* Food */,
-				6FECBA88252A7EB500848E2B /* Events */,
-				6FECBA82252A7EB500848E2B /* Loaders */,
-				6FECBAAD252A811E00848E2B /* Detail */,
-				6FECBA71252A7EAB00848E2B /* Constants.swift */,
-				6F05C7A225ABA03200388E69 /* Extensions.swift */,
-				6FECBA9E252A7F1E00848E2B /* Assets.xcassets */,
+				6FECBA83252A7EB500848E2B /* ImageLoader.swift */,
 				6FECBA4D252A7D7B00848E2B /* Info.plist */,
-				6FECBA4A252A7D7B00848E2B /* Preview Content */,
+				6F78E51625DECE11006AE109 /* Jungle.entitlements */,
 			);
 			path = Jungle;
 			sourceTree = "<group>";
@@ -228,21 +245,12 @@
 			isa = PBXGroup;
 			children = (
 				6FECBA7C252A7EB500848E2B /* Data.swift */,
-				6FECBA5F252A7E0000848E2B /* testBeverages.json */,
+				6F78E53825DEFD3E006AE109 /* testBeverages.json */,
 				6FFF698925AB396E00D790AD /* testEvents.json */,
 				6FECBA60252A7E0000848E2B /* testFoods.json */,
 				6FECBA64252A7E5A00848E2B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6FECBA82252A7EB500848E2B /* Loaders */ = {
-			isa = PBXGroup;
-			children = (
-				6FECBA83252A7EB500848E2B /* ImageLoader.swift */,
-				6FECBA84252A7EB500848E2B /* DataLoader.swift */,
-			);
-			path = Loaders;
 			sourceTree = "<group>";
 		};
 		6FECBA88252A7EB500848E2B /* Events */ = {
@@ -353,10 +361,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F78E52A25DEFB44006AE109 /* Launch Screen.storyboard in Resources */,
 				6F78E51D25DED0FA006AE109 /* Localizable.strings in Resources */,
 				6F78E4FC25DEA24A006AE109 /* testFoods.json in Resources */,
 				6F78E4F925DEA248006AE109 /* testEvents.json in Resources */,
-				6F78E4F625DEA246006AE109 /* testBeverages.json in Resources */,
 				6F78E50525DEA6AE006AE109 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,12 +373,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F26F92E253E03BB00698806 /* testBeverages.json in Resources */,
 				6F26F922253E001700698806 /* Localizable.strings in Resources */,
 				6FECBA65252A7E5A00848E2B /* Preview Assets.xcassets in Resources */,
 				6FECBA55252A7DDA00848E2B /* Launch Screen.storyboard in Resources */,
 				6FECBA9F252A7F1E00848E2B /* Assets.xcassets in Resources */,
 				6F26F930253E03D900698806 /* testFoods.json in Resources */,
+				6F78E53925DEFD3F006AE109 /* testBeverages.json in Resources */,
 				6FFF698A25AB396E00D790AD /* testEvents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,7 +475,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Jungle-app-clip/Jungle_app_clip.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_ASSET_PATHS = "\"Jungle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 94U9UR9TXD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Jungle-app-clip/Info.plist";
@@ -492,7 +500,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Jungle-app-clip/Jungle_app_clip.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_ASSET_PATHS = "\"Jungle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 94U9UR9TXD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Jungle-app-clip/Info.plist";
@@ -636,7 +644,7 @@
 				CODE_SIGN_ENTITLEMENTS = Jungle/Jungle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_ASSET_PATHS = "\"Jungle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 94U9UR9TXD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Jungle/Info.plist;
@@ -662,7 +670,7 @@
 				CODE_SIGN_ENTITLEMENTS = Jungle/Jungle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_ASSET_PATHS = "\"Jungle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 94U9UR9TXD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Jungle/Info.plist;

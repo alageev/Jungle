@@ -46,7 +46,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="NLM-e5-kja">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nsn-0i-lsC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="UbT-No-F1n" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="niX-BR-v5F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -59,6 +58,7 @@
                         <segue destination="7LX-Ky-0yK" kind="relationship" relationship="viewControllers" id="x3b-NI-p6l"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsn-0i-lsC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-697" y="727"/>
         </scene>
