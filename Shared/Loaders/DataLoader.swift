@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 final class DataLoader: ObservableObject {
     @Published var beverages: [Beverage] = []
@@ -19,59 +20,32 @@ final class DataLoader: ObservableObject {
     }
     
     private func loadBeverages() {
-        URLSession.shared.dataTask(with: Constants.shared.beverages) { data, _, error in
-            do {
-                guard let data = data else {
-                    return
-                }
-                
-                let beverages = try JSONDecoder().decode([Beverage].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.beverages = beverages
-                }
-                
-            } catch {
-                print("Error decoding JSON: ", error)
-            }
-        }.resume()
+        URLSession.shared.dataTaskPublisher(for: Constants.shared.beverages)
+            .map { $0.data }
+            .decode(type: [Beverage].self, decoder: JSONDecoder())
+            .replaceError(with: [])
+            .eraseToAnyPublisher()
+            .receive(on: RunLoop.main)
+            .assign(to: &$beverages)
     }
     
     private func loadFood() {
-        URLSession.shared.dataTask(with: Constants.shared.foods) { data, _, error in
-            do {
-                guard let data = data else {
-                    return
-                }
-                
-                let food = try JSONDecoder().decode([Food].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.food = food
-                }
-                
-            } catch {
-                print("Error decoding JSON: ", error)
-            }
-        }.resume()
+        URLSession.shared.dataTaskPublisher(for: Constants.shared.foods)
+            .map { $0.data }
+            .decode(type: [Food].self, decoder: JSONDecoder())
+            .replaceError(with: [])
+            .eraseToAnyPublisher()
+            .receive(on: RunLoop.main)
+            .assign(to: &$food)
     }
     
     private func loadEvents() {
-        URLSession.shared.dataTask(with: Constants.shared.events) { data, _, error in
-            do {
-                guard let data = data else {
-                    return
-                }
-                
-                let events = try JSONDecoder().decode([Event].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.events = events
-                }
-                
-            } catch {
-                print("Error decoding JSON: ", error)
-            }
-        }.resume()
+        URLSession.shared.dataTaskPublisher(for: Constants.shared.events)
+            .map { $0.data }
+            .decode(type: [Event].self, decoder: JSONDecoder())
+            .replaceError(with: [])
+            .eraseToAnyPublisher()
+            .receive(on: RunLoop.main)
+            .assign(to: &$events)
     }
 }
