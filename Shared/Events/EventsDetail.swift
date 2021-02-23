@@ -23,7 +23,7 @@ struct EventsDetail: View {
                     HStack {
                         Text("Date")
                         Spacer()
-                        Text("\(event.date.day()) \(event.date.month()) \(event.date.year())")
+                        Text(event.date)
                     }
                     .padding(.trailing)
                     Divider()

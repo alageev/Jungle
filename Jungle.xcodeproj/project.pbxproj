@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F05C7A325ABA03200388E69 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F05C7A225ABA03200388E69 /* Extensions.swift */; };
 		6F26F922253E001700698806 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F26F924253E001700698806 /* Localizable.strings */; };
 		6F26F930253E03D900698806 /* testFoods.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA60252A7E0000848E2B /* testFoods.json */; };
 		6F5D8BF225B33256006E2DA6 /* EventTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D8BF125B33256006E2DA6 /* EventTab.swift */; };
@@ -32,7 +31,6 @@
 		6F78E4E525DEA21E006AE109 /* DetailTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBAA2252A7F6300848E2B /* DetailTop.swift */; };
 		6F78E4E825DEA220006AE109 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFF698C25AB3BEA00D790AD /* DescriptionView.swift */; };
 		6F78E4EB25DEA223006AE109 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBA71252A7EAB00848E2B /* Constants.swift */; };
-		6F78E4EE25DEA225006AE109 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F05C7A225ABA03200388E69 /* Extensions.swift */; };
 		6F78E4F325DEA245006AE109 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECBA7C252A7EB500848E2B /* Data.swift */; };
 		6F78E4F925DEA248006AE109 /* testEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FFF698925AB396E00D790AD /* testEvents.json */; };
 		6F78E4FC25DEA24A006AE109 /* testFoods.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FECBA60252A7E0000848E2B /* testFoods.json */; };
@@ -92,7 +90,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6F05C7A225ABA03200388E69 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6F26F923253E001700698806 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6F26F926253E001A00698806 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6F5D8BF125B33256006E2DA6 /* EventTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTab.swift; sourceTree = "<group>"; };
@@ -196,7 +193,6 @@
 				6F78E52D25DEFB5E006AE109 /* Loaders */,
 				6FECBAAD252A811E00848E2B /* Detail */,
 				6FECBA71252A7EAB00848E2B /* Constants.swift */,
-				6F05C7A225ABA03200388E69 /* Extensions.swift */,
 				6FECBA9E252A7F1E00848E2B /* Assets.xcassets */,
 				6FECBA4A252A7D7B00848E2B /* Preview Content */,
 			);
@@ -398,7 +394,6 @@
 				6F78E4E225DEA21C006AE109 /* DetailRow.swift in Sources */,
 				6F78E4DF25DEA219006AE109 /* DataLoader.swift in Sources */,
 				6F78E4D225DEA20C006AE109 /* EventsDetail.swift in Sources */,
-				6F78E4EE25DEA225006AE109 /* Extensions.swift in Sources */,
 				6F78E4BD25DEA1FC006AE109 /* Food.swift in Sources */,
 				6F78E4EB25DEA223006AE109 /* Constants.swift in Sources */,
 				6F78E4BA25DEA1F4006AE109 /* BeverageRow.swift in Sources */,
@@ -419,7 +414,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F05C7A325ABA03200388E69 /* Extensions.swift in Sources */,
 				6FECBA92252A7EB500848E2B /* Food.swift in Sources */,
 				6FECBA90252A7EB500848E2B /* Beverage.swift in Sources */,
 				6FECBAA3252A7F6300848E2B /* DetailTop.swift in Sources */,

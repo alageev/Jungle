@@ -21,6 +21,7 @@ struct DescriptionView: View {
                 .padding(.bottom)
             Text(description)
                 .padding(.trailing)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 }

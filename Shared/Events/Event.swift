@@ -8,10 +8,11 @@
 import Foundation
 
 struct Event: Decodable, Identifiable {
-    var id: UUID
-    var title: String
-    var description: String
-    var date: Date
+    let id: UUID
+    let title: String
+    let description: String
+    let date: String
+    let numericDate: Date
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -27,8 +28,9 @@ struct Event: Decodable, Identifiable {
         description = try container.decode(String.self, forKey: .description)
         let dateString = try container.decode(String.self, forKey: .date)
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        date = dateFormatter.date(from: dateString) ?? Date()
+        numericDate = dateFormatter.date(from: dateString) ?? Date()
+        dateFormatter.dateFormat = "d MMM y"
+        date = dateFormatter.string(from: numericDate)
     }
 }

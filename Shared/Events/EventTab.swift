@@ -15,7 +15,7 @@ struct EventTab: View {
     let events: [Event]
     
     init(_ events: [Event]) {
-        self.events = events
+        self.events = events.sorted { $0.numericDate > $1.numericDate }
     }
     
     var body: some View {

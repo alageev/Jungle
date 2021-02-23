@@ -12,6 +12,7 @@ struct EventView: View {
     @Binding var selection: Event?
     @ObservedObject var imageLoader = ImageLoader()
     let event: Event
+    let dateFormatter = DateFormatter()
         
     init (_ event: Event, selection: Binding<Event?>) {
         self.event = event
@@ -34,7 +35,11 @@ struct EventView: View {
                             .font(.title)
                             .foregroundColor(.primary)
                             .padding([.leading, .top])
-                        Text("\(event.date.day()) \(event.date.month()) \(event.date.year())")
+//                        Text("\(event.date.day()) \(event.date.month()) \(event.date.year())")
+//                            .font(.subheadline)
+//                            .foregroundColor(.secondary)
+//                            .padding([.leading, .bottom])
+                        Text(event.date)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                             .padding([.leading, .bottom])
